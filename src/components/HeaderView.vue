@@ -7,7 +7,7 @@ import '@/assets/style/header.css';
 <template>
     <div class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="@/assets/img/nid77.jpg" alt="12" width="100px" class="w-8 h-8 object-cover rounded-full">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portfolio</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portfolio V2</span>
     </div>
 
     <div class="items-center justify-between w-full md:flex md:w-auto ">
@@ -26,10 +26,10 @@ import '@/assets/style/header.css';
                 class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
                 <RouterLink to="/projets">Mes Projets</RouterLink>
             </li>
-            <li
+            <!-- <li
                 class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
                 <RouterLink to="/experiences">Experiences</RouterLink>
-            </li>
+            </li> -->
         </ul>
     </div>
 

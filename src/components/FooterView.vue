@@ -1,7 +1,5 @@
 <template>
-
-    <p class="font-bold">PORTFOLIO V3</p>
-
+    <p class="font-bold">PORTFOLIO V2</p>
 </template>
 
 <script setup lang="ts">
