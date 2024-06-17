@@ -6,7 +6,9 @@
 </template>
   
 <script lang="ts">
-
+export default {
+    name: 'ErrorView',
+};
 </script>
 
 <style scoped>
