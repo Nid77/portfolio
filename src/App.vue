@@ -22,6 +22,7 @@ import FooterView from './components/FooterView.vue';
 .content {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   gap: 3rem;
 }
 </style>
