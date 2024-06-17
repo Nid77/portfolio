@@ -43,6 +43,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-items: center;
+    padding: 1rem;
 }
 
 #projet section {
@@ -77,15 +78,16 @@ a:hover {
     border-radius: 0.5rem;
     padding: 2rem;
     height: 15rem;
-    width: 25rem;
 }
 
 
 #projet section img {
-    height: 50%;
+    max-height: 90%;
     transition: transform 0.3s ease;
     margin-top: 10px;
-    width: auto;
+    
+    max-width: 90%;
+     align-self: center;
 }
 
 #projet section img:hover {
