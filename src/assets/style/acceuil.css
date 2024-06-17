@@ -1,0 +1,119 @@
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #94a1b2;
+}
+
+a {
+    text-decoration: none;
+    color: #fffffe;
+}
+
+a:hover {
+    color: gray;
+}
+
+
+#qui-suis-je {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centre verticalement */
+    align-items: center;
+    /* Centre horizontalement */
+    width: 60%;
+    background-color: #16161a;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#qui-suis-je section {
+    max-width: 80%;
+}
+
+
+
+
+
+#projet {
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#projet section {
+    display: flex;
+    flex-direction: column;
+    background-color: #16161a;
+    padding: 10px;
+    border-radius: 0.5rem;
+    border-color: white;
+    border: 1px solid;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    height: 25rem;
+    width: 75%;
+}
+
+.projet-equipe,.projet-perso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+#projet section a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    height: 15rem;
+    width: 25rem;
+}
+
+
+#projet section img {
+    height: 50%;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+    width: auto;
+}
+
+#projet section img:hover {
+    transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1000px) {
+
+    #projet section {
+        width: 80%;
+        height: auto;
+    }
+
+    #projet section div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        height: auto;
+    }
+    
+}

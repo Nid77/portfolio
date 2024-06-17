@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    background-color: #242629;
+    margin: 0;
+
+
+}
+
+.competence{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border: 3px solid #ffffff;
+    padding: 2rem;
+    width: 50%;
+    color: #ffffff;
+    gap: 1rem;
+}
+
+.competence div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.competence div:first-child button{
+    
+   justify-content: flex-end; 
+   height: 50%;
+}
+#bar.bar {
+    display: flex;
+    border: 0;
+    height: 1px;
+    background: #fffefe;
+    width: 100%;
+}
+
+#bar{
+    display: none;
+}
+
+#detail {
+    display: none;
+}
+
+#detail.visible {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

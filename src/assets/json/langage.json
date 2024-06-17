@@ -1,0 +1,157 @@
+{
+  "Langages": [
+    {
+      "nom": "C",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+      "lien": "https://fr.wikipedia.org/wiki/C_(langage)",
+      "tags": ["langage compilé", "procedural", "system programming"],
+      "projets": ["Projet1", "Projet2"]
+    },
+    {
+      "nom": "C++",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+      "lien": "https://isocpp.org/",
+      "tags": ["langage compilé", "orienté objet", "haute performance"],
+      "projets": ["Projet3", "Projet4"]
+    },
+    {
+      "nom": "C#",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+      "lien": "https://docs.microsoft.com/fr-fr/dotnet/csharp/",
+      "tags": ["langage compilé", "orienté objet", "Microsoft"],
+      "projets": ["Projet5", "Projet6"]
+    },
+    {
+      "nom": "Go",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
+      "lien": "https://golang.org/",
+      "tags": ["langage compilé", "concurrent", "efficace"],
+      "projets": ["Projet7", "Projet8"]
+    },
+    {
+      "nom": "Python",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+      "lien": "https://www.python.org/",
+      "tags": ["langage de script", "programmation orientée objet", "dynamique"],
+      "projets": ["Projet9", "Projet10"]
+    },
+    {
+      "nom": "Java",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+      "lien": "https://www.java.com/",
+      "tags": ["langage compilé", "orienté objet", "multiplateforme"],
+      "projets": ["Projet11", "Projet12"]
+    },
+    {
+      "nom": "Kotlin",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",
+      "lien": "https://kotlinlang.org/",
+      "tags": ["langage compilé", "interoperable", "concis"],
+      "projets": ["Projet13", "Projet14"]
+    },
+    {
+      "nom": "HTML",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      "lien": "https://developer.mozilla.org/fr/docs/Web/HTML",
+      "tags": ["langage de balisage", "structure web", "statique"],
+      "projets": ["Projet15", "Projet16"]
+    },
+    {
+      "nom": "CSS",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      "lien": "https://developer.mozilla.org/fr/docs/Web/CSS",
+      "tags": ["langage de style", "mise en forme web", "design"],
+      "projets": ["Projet17", "Projet18"]
+    },
+    {
+      "nom": "PHP",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+      "lien": "https://www.php.net/",
+      "tags": ["langage de script", "côté serveur", "dynamique"],
+      "projets": ["Projet19", "Projet20"]
+    },
+    {
+      "nom": "JavaScript",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      "lien": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
+      "tags": ["langage de script", "front-end", "back-end"],
+      "projets": ["Projet21", "Projet22"]
+    }
+  ],
+  "Frameworks": [
+    {
+      "nom": "Vue.js",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+      "lien": "https://vuejs.org/",
+      "tags": ["framework JavaScript", "front-end", "réactif"],
+      "projets": ["Projet1", "Projet2"]
+    },
+    {
+      "nom": "Symfony",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg",
+      "lien": "https://symfony.com/",
+      "tags": ["framework PHP", "back-end", "modulaire"],
+      "projets": ["Projet3", "Projet4"]
+    }
+  ],
+  "Services": [
+    {
+      "nom": "GitHub",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+      "lien": "https://github.com/",
+      "tags": ["plateforme de développement collaboratif", "gestion de versions", "hébergement de code"],
+      "projets": ["Projet1", "Projet2"]
+    },
+    {
+      "nom": "GitLab",
+      "image": "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png",
+      "lien": "https://about.gitlab.com/",
+      "tags": ["plateforme de développement collaboratif", "gestion de versions", "hébergement de code"],
+      "projets": ["Projet3", "Projet4"]
+    },
+    {
+      "nom": "Trello",
+      "image": "https://cdn.worldvectorlogo.com/logos/trello.svg",
+      "lien": "https://trello.com/",
+      "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
+      "projets": ["Projet5", "Projet6"]
+    }
+  ],
+  "IDE": [
+    {
+      "nom": "IntelliJ IDEA",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg",
+      "lien": "https://www.jetbrains.com/idea/",
+      "tags": ["IDE", "Java", "Kotlin", "Android", "Web"],
+      "projets": ["Projet1", "Projet2"]
+    },
+    {
+      "nom": "Visual Studio Code",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+      "lien": "https://code.visualstudio.com/",
+      "tags": ["IDE", "multi-langage", "lightweight", "extensible"],
+      "projets": ["Projet3", "Projet4"]
+    },
+    {
+      "nom": "NetBeans",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/1280px-Apache_NetBeans_Logo.svg.png",
+      "lien": "https://netbeans.apache.org/",
+      "tags": ["IDE", "Java", "PHP", "C/C++", "Web"],
+      "projets": ["Projet5", "Projet6"]
+    },
+    {
+      "nom": "Code::Blocks",
+      "image": "https://upload.wikimedia.org/wikipedia/fr/0/01/Codeblocks_logo1.png",
+      "lien": "http://www.codeblocks.org/",
+      "tags": ["IDE", "C/C++", "multi-plateforme"],
+      "projets": ["Projet7", "Projet8"]
+    },
+    {
+      "nom": "Unity",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg",
+      "lien": "https://unity.com/",
+      "tags": ["IDE", "moteur de jeu", "développement de jeux"],
+      "projets": ["Projet1", "Projet2"]
+    }
+  ]
+}

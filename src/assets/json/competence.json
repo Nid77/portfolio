@@ -1,0 +1,49 @@
+{
+    "competences": [
+      {
+        "nom_competence": "Réalisation d’application",
+        "liste": [
+          "Maîtriser différents langages de programmation",
+          "Maîtriser différents types de programmation",
+          "Réaliser des programmes pour résoudre un problème donné",
+          "Ecrire un code lisible et savoir faire une documentation",
+          "Choisir une structure de données adaptée",
+          "Réaliser des phases de tests",
+          "Savoir utiliser et créer des API"
+        ]
+      },
+      {
+        "nom_competence": "Optimisation des applications informatiques",
+        "liste": [
+          "Analyser un problème et le découper en tâches",
+          "Analyser et comprendre les enjeux et l’impact d’un algorithme existant",
+          "Formaliser et utiliser des outils mathématiques pour l’informatique",
+          "Appréhender les différents niveaux de langages",
+          "Utiliser des techniques algorithmiques adaptées",
+          "Anticiper les résultats d’un algo (temps d’exécution, espace mémoire, …)",
+          "Optimiser des algos"
+        ]
+      },
+      {
+        "nom_competence": "Gérer des données de l’informations",
+        "liste": [
+          "Mettre à jour et interroger une base de données relationnelle (en requêtes directes ou à travers une application)",
+          "Visualiser des données",
+          "Concevoir une base de données relationnelle à partir d'un cahier des charges",
+          "Optimiser les modèles de données de l'entreprise",
+          "Assurer la confidentialité des données (intégrité et sécurité)",
+          "Organiser la restitution de données à travers la programmation et la visualisation"
+        ]
+      },
+      {
+        "nom_competence": "Travailler dans une équipe informatique",
+        "liste": [
+          "Savoir communiquer avec son équipe",
+          "Savoir manager une équipe informatique",
+          "Connaître et savoir appliquer les différentes méthodes de développement",
+          "Utiliser des systèmes de gestion de code source pour organiser son travail",
+          "Faire une veille technologique, être toujours informé sur l’actualité dans l’informatique"
+        ]
+      }
+    ]
+  }
