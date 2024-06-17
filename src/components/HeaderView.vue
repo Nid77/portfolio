@@ -14,24 +14,21 @@ import '@/assets/style/header.css';
         <!-- Mettre des RouterLink au lieu de la balise a -->
         <ul
             class="flex flex-col text-lg p-4 md:p-0 mt-4 font-extrabold md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-            <li>
-                <a href="#"
-                    class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Accueil</a>
+            <li
+                class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                <RouterLink to="/">Accueil</RouterLink>
             </li>
-            <li>
-                <a href="#"
-                    class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Mes
-                    competences</a>
+            <li
+                class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                <RouterLink to="/competences">Compétences</RouterLink>
             </li>
-            <li>
-                <a href="#"
-                    class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Mes
-                    Projets</a>
+            <li
+                class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                <RouterLink to="/projets">Mes Projets</RouterLink>
             </li>
-            <li>
-                <a href="#"
-                    class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">A
-                    propos</a>
+            <li
+                class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">
+                <RouterLink to="/experiences">Experiences</RouterLink>
             </li>
         </ul>
     </div>

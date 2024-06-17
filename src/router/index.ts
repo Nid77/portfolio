@@ -9,6 +9,28 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
+    {
+      path: '/competences',
+      name: 'competences',
+      component: () => import('../views/CompetenceView.vue'),
+    },
+    {
+      path: '/projets',
+      name: 'projets',
+      component: () => import('../components/InConstructView.vue'),
+
+    },
+    {
+      path: '/experiences',
+      name: 'experiences',
+      component: () => import('../components/InConstructView.vue'),
+
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'error',
+      component: () => import('../components/ErrorView.vue'),
+    }
   ]
 })
 

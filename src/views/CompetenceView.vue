@@ -1,0 +1,68 @@
+<template>
+    <div class=" bg-[#16161a] rounded p-20">
+        <h1 class="text-6xl text-white text-center font-bold ">Mes Compétences</h1>
+
+        <h2 class="text-2x1 text-center text-white p-8 ">Les competences que jai acquis durant mes années d'etude en BUT
+            INFORMATIQUE
+        </h2>
+    </div>
+    <div class="competences">
+        <div v-if="competences" v-for="competence in competences" :key="competence.nom_competence"
+            :id="competence.nom_competence" class="competence text-3x1 ">
+            <div>
+                <h4>{{ competence.nom_competence }}</h4>
+                <button class="font-bold defilement" type="button" :value="competence.nom_competence"
+                    @click="toggleDetail(competence.nom_competence)">+</button>
+            </div>
+            <hr :class="{ bar: activeCompetence === competence.nom_competence }" id="bar" />
+            <div id="detail"
+                :class="['border-2 border-white-500 bg-black-500 text-2x1 p-4 rounded-lg', { visible: activeCompetence === competence.nom_competence }]">
+                <h5 v-for="item in competence.liste" :key="item">- {{ item }}</h5>
+            </div>
+        </div>
+        <div v-else-if="error" class="text-3x1 text-color-red">{{ error }}</div>
+    </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue';
+import competenceData from '@/assets/json/competence.json';
+import '@/assets/style/competence.css';
+
+interface Competence {
+    nom_competence: string;
+    liste: string[];
+}
+
+export default defineComponent({
+    name: 'CompetenceList',
+    setup() {
+        const competences = ref<Competence[]>([]);
+        const error = ref<string | null>(null);
+        const activeCompetence = ref<string | null>(null);
+
+        onMounted(() => {
+            try {
+                competences.value = (competenceData as any).competences;
+            } catch (err) {
+                error.value = 'Erreur lors du chargement du fichier JSON';
+            }
+        });
+
+        const toggleDetail = (competenceName: string) => {
+            if (activeCompetence.value === competenceName) {
+                activeCompetence.value = null;
+            } else {
+                activeCompetence.value = competenceName;
+            }
+        };
+
+        return {
+            competences,
+            error,
+            activeCompetence,
+            toggleDetail,
+        };
+    },
+});
+</script>

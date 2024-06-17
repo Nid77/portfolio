@@ -9,11 +9,19 @@ import FooterView from './components/FooterView.vue';
     <HeaderView />
   </header>
 
-  <RouterView />
+  <div class="content">
+    <RouterView />
+  </div>
 
   <footer>
     <FooterView />
   </footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+</style>
