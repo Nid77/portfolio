@@ -13,12 +13,26 @@
             <div>
                 <h4>{{ competence.nom_competence }}</h4>
                 <button class="font-bold defilement" type="button" :value="competence.nom_competence"
-                    @click="toggleDetail(competence.nom_competence)">+</button>
+                    @click="toggleDetail(competence.nom_competence)">{{ activeCompetence === competence.nom_competence ? "-"
+                        : "+" }}</button>
             </div>
             <hr :class="{ bar: activeCompetence === competence.nom_competence }" id="bar" />
             <div id="detail" :class="['', { visible: activeCompetence === competence.nom_competence }]">
                 <h5 v-for="item in competence.liste" :key="item">- {{ item }}</h5>
+
+                <hr :class="{ bar: competence.projets && competence.projets.length > 0 }" id="bar" />
+                <h4 v-if="competence.projets && competence.projets.length > 0"
+                    class="self-center font-bold defilement text-4x1">Projets</h4>
+
+                <div v-if="competence.projets && competence.projets.length > 0" class="projets">
+                    <div v-for="projet in competence.projets " class="projet">
+                        <img :src="getImage(projet.img)" alt="image du projet">
+                        <p class="">{{ projet.nom_projet }}</p>
+                        <p>{{ projet.description }}</p>
+                    </div>
+                </div>
             </div>
+
         </div>
         <div v-else-if="error" class="text-3x1 text-color-red">{{ error }}</div>
     </div>
@@ -46,6 +60,13 @@ import '@/assets/style/competence.css';
 interface Competence {
     nom_competence: string;
     liste: string[];
+    projets: Projet[];
+}
+
+interface Projet {
+    nom_projet: string;
+    img: string;
+    description: string;
 }
 
 interface Technology {
@@ -83,12 +104,17 @@ export default defineComponent({
             }
         };
 
+        function getImage(img: string) {
+            return `/src/assets/img/projet-BUT/${img}`;
+        }
+
         return {
             competences,
             error,
             activeCompetence,
             toggleDetail,
             technologies: technologiesData as Record<string, Technology[]>,
+            getImage
         };
     },
 });

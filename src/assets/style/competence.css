@@ -17,13 +17,13 @@
     gap: 1rem;
 }
 
-.competence div:first-child{
+.competence > div:first-child{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 5rem;
 }
-.competence div:first-child button{
+.competence > div:first-child button{
     
    justify-content: flex-end; 
    height: 50%;
@@ -62,3 +62,33 @@ Pour la version avec tab
     text-align: left;
     gap: 1rem;
 }
+
+.projets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.projet{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 3px solid #ab9f9f;
+    height: 20rem; 
+    padding: 0.25rem;
+    font-size: 1rem;
+    color: #ffffff;
+    gap: 1rem;
+}
+.projet img{
+    max-height: 50%;
+}
+.projet p{
+font-size: 0.8rem;
+}
+

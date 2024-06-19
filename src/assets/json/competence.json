@@ -10,6 +10,26 @@
           "Choisir une structure de données adaptée",
           "Réaliser des phases de tests",
           "Savoir utiliser et créer des API"
+        ],
+        "projets":[
+          {
+            "nom_projet":"12cm3",
+            "description":"C'est un jeu de course rally en 2D, on a la possibilite de jouer a des circuit creer par la communauté ou les developpeurs ",
+            "img":"logo12cm3.png"
+          },
+          {
+            "nom_projet":"Liste de course",
+            "description":"C'est une liste de course avec des statistiques. On ajouter, modifier supprimer des courses. C'est un projet fait avec le framework Symfony ",
+            "img":"liste2course.png"
+          },{
+            "nom_projet":"Site web vente de Basket",
+            "description":"C'est un site de vente , on va pouvoir commander des baskets et faire une paire de basket personnaliser",
+            "img":"site-basket.png"
+          },{
+            "nom_projet":"My Weather",
+            "description":"Une application qui va pouvoir voir la meto d'une ville marquer sur google map",
+            "img":"myweather.png"
+          }
         ]
       },
       {

@@ -10,6 +10,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["node"],
+    "target": "es6",
   }
 }
