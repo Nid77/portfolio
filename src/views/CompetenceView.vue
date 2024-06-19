@@ -6,6 +6,7 @@
             INFORMATIQUE
         </h2>
     </div>
+
     <div class="competences">
         <div v-if="competences" v-for="competence in competences" :key="competence.nom_competence"
             :id="competence.nom_competence" class="competence text-3x1 ">
@@ -15,18 +16,31 @@
                     @click="toggleDetail(competence.nom_competence)">+</button>
             </div>
             <hr :class="{ bar: activeCompetence === competence.nom_competence }" id="bar" />
-            <div id="detail"
-                :class="['border-2 border-white-500 bg-black-500 text-2x1 p-4 rounded-lg', { visible: activeCompetence === competence.nom_competence }]">
+            <div id="detail" :class="['', { visible: activeCompetence === competence.nom_competence }]">
                 <h5 v-for="item in competence.liste" :key="item">- {{ item }}</h5>
             </div>
         </div>
         <div v-else-if="error" class="text-3x1 text-color-red">{{ error }}</div>
     </div>
+
+    <!-- <div class="competences">
+        <div class="header">
+            <div v-if="competences" v-for="competence in competences" :key="competence.nom_competence"
+                :id="competence.nom_competence" class="competence text-3x1 ">
+
+                <h4>{{ competence.nom_competence }}</h4>
+
+            </div>
+            <div v-else-if="error" class="text-3x1 text-color-red">{{ error }}</div>
+        </div>
+    </div> -->
+    <!-- <TechnologiesList :technologies="technologies" /> -->
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
 import competenceData from '@/assets/json/competence.json';
+import technologiesData from '@/assets/json/technologies.json';
 import '@/assets/style/competence.css';
 
 interface Competence {
@@ -34,8 +48,20 @@ interface Competence {
     liste: string[];
 }
 
+interface Technology {
+    nom: string;
+    lien: string;
+    image: string;
+    tags: string[];
+    projets: string[];
+}
+
+
 export default defineComponent({
     name: 'CompetenceList',
+    components: {
+        TechnologiesList: () => import('@/components/TechnologiesList.vue'),
+    },
     setup() {
         const competences = ref<Competence[]>([]);
         const error = ref<string | null>(null);
@@ -62,6 +88,7 @@ export default defineComponent({
             error,
             activeCompetence,
             toggleDetail,
+            technologies: technologiesData as Record<string, Technology[]>,
         };
     },
 });

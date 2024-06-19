@@ -44,6 +44,29 @@
           "Utiliser des systèmes de gestion de code source pour organiser son travail",
           "Faire une veille technologique, être toujours informé sur l’actualité dans l’informatique"
         ]
+      },{
+        "nom_competence":"Administrer des systèmes informatiques communicants complexes",
+        "liste": [
+        "Maîtriser l’architecture des systèmes et des réseaux",
+        "Installer et configurer un système d’exploitation et des outils de développement",
+        "Concevoir des applications communicantes par réseau",
+        "Sécuriser les systèmes",
+        "Rédiger des documentations",
+        "Appliquer les obligations légales, les normes et bonnes pratiques",
+        "Mettre en œuvre les corrections et solutions adaptées",
+        "Respecter les contraintes de performances / de coûts / d’efficacité",
+        "Assurer la pérennité des données et du code"
+        ]
+      },{
+        "nom_competence" :"Conduire un projet",
+        "liste": [
+        "Planification du projet",
+        "Découpage et répartition des tâches",
+        "Gestion de l'équipe (suivi et contrôle afin que le projet reste aligné avec ses objectifs)",
+        "Communiquer de manière efficace avec les acteurs du projet",
+        "Gestion des risques et du temps (Identifier les risques potentiels tout au long du projet et prendre des mesures pour les minimiser)",
+        "Évaluer les résultats et étudier les points qui pourraient être améliorés pour les prochains projet"
+        ]
       }
     ]
   }
