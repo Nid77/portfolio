@@ -12,24 +12,22 @@ const router = createRouter({
     {
       path: '/competences',
       name: 'competences',
-      component: () => import('../views/CompetenceView.vue'),
+      component: () => import('../views/CompetenceView.vue')
     },
     {
       path: '/projets',
       name: 'projets',
-      component: () => import('../components/InConstructView.vue'),
-
+      component: () => import('../components/InConstructView.vue')
     },
     {
       path: '/experiences',
       name: 'experiences',
-      component: () => import('../components/InConstructView.vue'),
-
+      component: () => import('../views/ExperienceView.vue')
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'error',
-      component: () => import('../components/ErrorView.vue'),
+      component: () => import('../components/ErrorView.vue')
     }
   ]
 })
