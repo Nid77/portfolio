@@ -48,13 +48,16 @@
             <div v-else-if="error" class="text-3x1 text-color-red">{{ error }}</div>
         </div>
     </div> -->
-    <!-- <TechnologiesList :technologies="technologies" /> -->
+    <div class="technos">
+        <TechnologiesList :technologies="technos" />
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
 import competenceData from '@/assets/json/competence.json';
 import technologiesData from '@/assets/json/technologies.json';
+import TechnologiesList from '@/components/TechnologiesList.vue';
 import '@/assets/style/competence.css';
 
 interface Competence {
@@ -81,7 +84,7 @@ interface Technology {
 export default defineComponent({
     name: 'CompetenceList',
     components: {
-        TechnologiesList: () => import('@/components/TechnologiesList.vue'),
+        TechnologiesList,
     },
     setup() {
         const competences = ref<Competence[]>([]);
@@ -113,9 +116,19 @@ export default defineComponent({
             error,
             activeCompetence,
             toggleDetail,
-            technologies: technologiesData as Record<string, Technology[]>,
+            technos: technologiesData as Record<string, Technology[]>,
             getImage
         };
     },
 });
 </script>
+
+<style scoped>
+.technos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+</style>
