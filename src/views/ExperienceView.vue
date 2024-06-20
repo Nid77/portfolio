@@ -14,6 +14,7 @@
         src="@/assets/img/experience/GONEXA/Logo rectangle négatif.png"
         alt="logo de GONEXA"
       />
+      <h3 class="text-4xl">TYPE : STAGE </h3>
       <h3 class="text-4xl">POSTE : Developpeur Fullstack</h3>
       <h4>Du 15/04/2024 au 5/07/2024</h4>
       <p></p>
