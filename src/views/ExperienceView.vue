@@ -19,26 +19,26 @@
       <p></p>
     </div>
 
-    <div class="competences text-white grid grid-cols-3 gap-4">
-      <div class="competence">
+    <div class="exp-competences text-white grid grid-cols-3 gap-4">
+      <div class="exp-competence">
         <h4>Competence : Réalisation d’application</h4>
         <h5>
           C'est avec la maitise de plusieurs lanages tel que Java et le C qui m'ont aider a
           apprendre d'autre langages utilisé par l'entreprise.
         </h5>
       </div>
-      <div class="competence">
+      <div class="exp-competence">
         <h4>Competences : Optimisation des applications informatiques</h4>
         <h5>-</h5>
       </div>
-      <div class="competence">
+      <div class="exp-competence">
         <h4>Competence : Gérer des données de l’informations</h4>
         <h5>
           Dans ce stage je me suis retouve confronté a des bases de données afin de realiser un
           projet
         </h5>
       </div>
-      <div class="competence">
+      <div class="exp-competence">
         <h4>Competence : Travailler dans une équipe informatique</h4>
         <h5>
           C'est avec ce stage que j'ai pu voir le trvail de plusieurs developpeur dans des projets.
@@ -46,11 +46,11 @@
           experimenter le travail dans une equipe informatique.
         </h5>
       </div>
-      <div class="competence">
+      <div class="exp-competence">
         <h4>Competence : Administrer des systèmes informatiques communicants complexes</h4>
         <h5>-</h5>
       </div>
-      <div class="competence">
+      <div class="exp-competence">
         <h4>Competence : Conduire un projet</h4>
         <h5>J'ai pu mettre en pratique la methode agile suivi dans ma formtion</h5>
       </div>
@@ -58,7 +58,7 @@
 
     <hr class="h-1 w-3/4 m-12" />
     <h3 class="text-white font-bold text-4xl mb-12">Projet</h3>
-    <div class="projet grid grid-cols-3 gap-4">
+    <div class="exp-projet grid grid-cols-3 gap-4">
       <img
         class=""
         src="@/assets/img/experience/GONEXA/page_statistiques.png"
@@ -92,12 +92,12 @@
   border-radius: 0.5rem;
 }
 
-.competence h4 {
+.exp-competence h4 {
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.competence {
+.exp-competence {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,7 +106,7 @@
   border: 0.5rem solid #cab2b2;
 }
 
-.projet img {
+.exp-projet img {
   width: 100%;
   height: 100%;
 }
