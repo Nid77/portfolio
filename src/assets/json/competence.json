@@ -30,7 +30,8 @@
             "description":"Une application qui va pouvoir voir la meto d'une ville marquer sur google map",
             "img":"myweather.png"
           }
-        ]
+        ],
+        "recul_reflexif":"Je maitrise differents langages grace a mes diffrents projets comme la liste de course ou l'aplication mobile de meteo. De plus, grace au projet 12cm3 j'ai pu apprendre a faire une API."
       },
       {
         "nom_competence": "Optimisation des applications informatiques",
