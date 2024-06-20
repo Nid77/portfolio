@@ -1,23 +1,23 @@
 <template>
-    <div class="technos self-center">
-        <div v-for=" competence in technologies">
-            <div
-                class="border-2 border-white-500 bg-[#7f5af0] text-2x1 p-4 rounded-lg flex flex-col items-center justify-center text-center w-3/4 gap-20 p-12">
-                <h2 class="text-5xl text-white text-center font-bold">test{{ }}</h2>
-                <div class="langages grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-3/4 self-center">
-                    <div v-for="techno in competence" :key="techno.nom"
-                        class="text-3x1 h-90 text-white bg-[#16161a] gap-4 flex flex-col text-center items-center border-2 border-white-500 bg-black-500 text-2x1 p-4 rounded-lg">
-                        <a :href="techno.lien">
-                            <img :src="techno.image" class="bg-white h-48" />
-                            <h4>{{ techno.nom }}</h4>
-                        </a>
+    <div class="technos">
+        <div v-for=" (techList, category) in technologies"
+            class="technos-container border-2 border-white-500 bg-black-500 justify-center p-4 text-white w-3/4">
+            <h2 class=" text-5xl text-center font-bold mb-8">{{ category }}</h2>
+            <div class="langages flex flex-row flex-wrap ">
+                <div v-for="techno in techList" :key="techno.nom"
+                    class="bg-[#16161a] flex flex-col text-center items-center bg-black-500 text-2x1 p-4 rounded-lg">
+                    <a :href="techno.lien">
+                        <img :src="techno.image" class="bg-white h-24 w-24 mb-4" />
+                        <h3>{{ techno.nom }}</h3>
+                    </a>
 
-                        <div class="border-2 border-white-500 bg-black-500 text-2x1 p-4 rounded-lg">
+                    <!--LES PROJETS 
+                            
+                            <div class="border-2 border-white-500 bg-black-500 text-2x1 p-4 rounded-lg">
                             <div v-for="projet in techno.projets" :key="projet">
                                 <h5 class="text-white">[{{ projet }}]</h5>
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
                 </div>
             </div>
         </div>
@@ -50,15 +50,5 @@ export default defineComponent({
 });
 </script>
   
-<style scoped>
-.technos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 12px;
-    border-radius: 8px;
-}
-</style>
+<style scoped></style>
   
