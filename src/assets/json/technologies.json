@@ -76,6 +76,18 @@
       "lien": "https://developer.mozilla.org/fr/docs/Web/JavaScript",
       "tags": ["langage de script", "front-end", "back-end"],
       "projets": ["Projet21", "Projet22"]
+    },{
+      "nom": "TypeScript",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "lien": "https://www.typescriptlang.org/",
+      "tags": ["langage de script", "front-end", "back-end"],
+      "projets": ["Projet23", "Projet24"]
+    },{
+      "nom": "Sass",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+      "lien": "https://sass-lang.com/",
+      "tags": ["langage de style", "CSS", "préprocesseur"],
+      "projets": ["Projet25", "Projet26"]
     }
   ],
   "Frameworks": [
