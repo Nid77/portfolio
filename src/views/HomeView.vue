@@ -63,6 +63,28 @@ import '@/assets/style/acceuil.css';
         </div>
 
       </section>
+
+      <section class="">
+        <h2 class="text-2xl font-extrabold text-white">Scolaire</h2>
+
+        <div class="projet-perso">
+          <a href="#">
+            <img src="@/assets/img/projet-BUT/logo12cm3.png" alt="image du projet">
+            <h3>12cm3</h3>
+          </a>
+
+          <a href="#">
+            <img src="@/assets/img/projet-BUT/site-basket.png" alt="image du projet">
+            <h3>Site web Basket</h3>
+          </a>
+
+          <a href="#">
+            <img src="@/assets/img/projet-BUT/myweather.png" alt="image du projet">
+            <h3>MyWeather</h3>
+          </a>
+        </div>
+
+      </section>
     </section>
 
     <section id="contact"

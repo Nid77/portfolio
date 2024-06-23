@@ -92,6 +92,12 @@
       "lien": "https://symfony.com/",
       "tags": ["framework PHP", "back-end", "modulaire"],
       "projets": ["Projet3", "Projet4"]
+    },{
+      "nom": "ASP.NET",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg",
+      "lien": "https://dotnet.microsoft.com/apps/aspnet",
+      "tags": ["framework C#", "back-end", "Microsoft"],
+      "projets": ["Projet5", "Projet6"]
     }
   ],
   "Services": [
@@ -115,6 +121,12 @@
       "lien": "https://trello.com/",
       "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
       "projets": ["Projet5", "Projet6"]
+    },{
+      "nom": "Azure DevOps",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+      "lien": "https://azure.microsoft.com/fr-fr/services/devops/",
+      "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
+      "projets": ["Projet7", "Projet8"]
     }
   ],
   "IDE": [
@@ -151,6 +163,25 @@
       "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg",
       "lien": "https://unity.com/",
       "tags": ["IDE", "moteur de jeu", "développement de jeux"],
+      "projets": ["Projet1", "Projet2"]
+    },{
+      "nom": "Android Studio",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Android_Studio_icon.svg",
+      "lien": "https://developer.android.com/studio",
+      "tags": ["IDE", "Java", "Kotlin", "Android"],
+      "projets": ["Projet3", "Projet4"]
+    },
+    {
+      "nom": "PyCharm",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/PyCharm_Icon.svg",
+      "lien": "https://www.jetbrains.com/pycharm/",
+      "tags": ["IDE", "Python", "Django", "Flask"],
+      "projets": ["Projet7", "Projet8"]
+    },{
+      "nom": "Visual Studio",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/59/Visual_Studio_Icon_2019.svg",
+      "lien": "https://visualstudio.microsoft.com/fr/",
+      "tags": ["IDE", "C#", "ASP.NET", "Azure"],
       "projets": ["Projet1", "Projet2"]
     }
   ]

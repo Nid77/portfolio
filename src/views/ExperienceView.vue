@@ -9,34 +9,45 @@
 
   <div class="exp">
     <div class="persentation mb-8 text-white flex flex-col gap-8">
-      <img
-        class=""
-        src="@/assets/img/experience/GONEXA/Logo rectangle négatif.png"
-        alt="logo de GONEXA"
-      />
+      <img class="" src="@/assets/img/experience/GONEXA/Logo rectangle négatif.png" alt="logo de GONEXA" />
       <h3 class="text-4xl">TYPE : STAGE </h3>
       <h3 class="text-4xl">POSTE : Developpeur Fullstack</h3>
-      <h4>Du 15/04/2024 au 5/07/2024</h4>
+      <h4>Du 15/04/2024 au 05/07/2024</h4>
       <p></p>
     </div>
+
+    <h3 class="text-white font-bold text-4xl mb-12">Platfomre Admin</h3>
+    <h4 class="text-white font-bold text-2xl mb-12">Dans ce satge je devais realiser une platforme admin qui permet a des
+      non informaticiens d'effectuer des changements en base de données facilemment</h4>
+    <div class="exp-projet grid grid-cols-3 gap-4">
+      <img class="" src="@/assets/img/experience/GONEXA/page_statistiques.png"
+        alt="capture d'ecran de la page des statistiques" />
+      <img class="" src="@/assets/img/experience/GONEXA/page_liste_comptes.png"
+        alt="capture d'ecran de la page des comptes" />
+      <img class="" src="@/assets/img/experience/GONEXA/page_compte_client.png"
+        alt="capture d'ecran de la page d'un compte client" />
+    </div>
+
+    <hr class="h-1 w-3/4 m-12" />
 
     <div class="exp-competences text-white grid grid-cols-3 gap-4">
       <div class="exp-competence">
         <h4>Competence : Réalisation d’application</h4>
         <h5>
           C'est avec la maitise de plusieurs lanages tel que Java et le C qui m'ont aider a
-          apprendre d'autre langages utilisé par l'entreprise.
+          apprendre d'autre langages utilisé par l'entreprise. De plus j'ai realisé une documenttation du projet.
         </h5>
       </div>
       <div class="exp-competence">
         <h4>Competences : Optimisation des applications informatiques</h4>
-        <h5>-</h5>
+        <h5>Dans la recuperation des statistiques, recupérer toute les données necéssaires, puis appliquer du traitement
+          etant donné que le nombre de donne n'est pas tres important</h5>
       </div>
       <div class="exp-competence">
         <h4>Competence : Gérer des données de l’informations</h4>
         <h5>
           Dans ce stage je me suis retouve confronté a des bases de données afin de realiser un
-          projet
+          projet.
         </h5>
       </div>
       <div class="exp-competence">
@@ -49,7 +60,8 @@
       </div>
       <div class="exp-competence">
         <h4>Competence : Administrer des systèmes informatiques communicants complexes</h4>
-        <h5>-</h5>
+        <h5>Dans la patforme admin , je me suis retouvé a configurer des methodes de requetes pour la partie backend du
+          projet.</h5>
       </div>
       <div class="exp-competence">
         <h4>Competence : Conduire un projet</h4>
@@ -57,25 +69,7 @@
       </div>
     </div>
 
-    <hr class="h-1 w-3/4 m-12" />
-    <h3 class="text-white font-bold text-4xl mb-12">Projet</h3>
-    <div class="exp-projet grid grid-cols-3 gap-4">
-      <img
-        class=""
-        src="@/assets/img/experience/GONEXA/page_statistiques.png"
-        alt="capture d'ecran de la page des statistiques"
-      />
-      <img
-        class=""
-        src="@/assets/img/experience/GONEXA/page_liste_comptes.png"
-        alt="capture d'ecran de la page des statistiques"
-      />
-      <img
-        class=""
-        src="@/assets/img/experience/GONEXA/page_compte_client.png"
-        alt="capture d'ecran de la page des statistiques"
-      />
-    </div>
+
   </div>
 </template>
 
