@@ -12,8 +12,8 @@ import '@/assets/style/acceuil.css';
 
           <p>Je m'appelle Rayan et je suis actuellement un <strong>étudiant en 2éme année de BUT INFORMATIQUE.</strong> Je
             suis une personne curieuse des nouvelles avancées informatiques.</p>
-          <p>Ce que j'aime faire, c'est des projets personnels ou en équipe qui me permet d'en apprendre plus sur la
-            programmation notamment dans le développement logiciel ou web</p>
+          <p>Ce que j'aime faire, c'est des projets personnels ou en équipe qui me permet d'en apprendre plus dans le
+            développement informatique.</p>
 
         </section>
       </div>
@@ -24,7 +24,7 @@ import '@/assets/style/acceuil.css';
       <h1 class="text-4xl font-extrabold text-white text-center">Mes projets</h1>
 
       <section id="equipe" class="">
-        <h2 class="text-2xl font-extrabold text-white">En Equipe</h2>
+        <h2 class="text-2xl font-extrabold text-white">Jeux-Vidéo</h2>
 
         <div class="projet-equipe">
           <a href="https://nid77.itch.io/mind-connexion">
@@ -89,12 +89,11 @@ import '@/assets/style/acceuil.css';
 
     <section id="contact"
       class=" flex flex-col text-center border border-blue-500 bg-[#16161a] p-6 gap-4 w-3/4  self-center">
-      <h2 class="text-3xl text-white font-extrabold">Contact</h2>
+      <h2 class="text-3xl text-white font-extrabold">Me Contacter</h2>
 
-      <p>Pour me contacter vous pouvez m'envoyer un email ou me contacter sur mes réseaux sociaux ! </p>
+      <p>Pour me contacter, vous pouvez m'envoyer un email ! </p>
 
-      <p class="self-start"><i class="fas fa-envelope"></i> Email : ray.tcontact@protonmail.me</p>
-      <p class="self-start"><i class="fab fa-discord "></i> Discord : nid77</p>
+      <p class=""><i class="fas fa-envelope"></i> Email : ray.tcontact@protonmail.com</p>
 
     </section>
 
