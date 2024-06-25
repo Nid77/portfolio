@@ -16,10 +16,10 @@ import '@/assets/style/header.css'
         <RouterLink to="/">Accueil</RouterLink>
       </li>
       <li class="">
-        <RouterLink to="/competences">Compétences</RouterLink>
+        <RouterLink to="/projets">Mes Projets</RouterLink>
       </li>
       <li class="">
-        <RouterLink to="/projets">Mes Projets</RouterLink>
+        <RouterLink to="/competences">Compétences</RouterLink>
       </li>
       <li class="">
         <!-- class="block py-2 px-3 text-white-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" -->
