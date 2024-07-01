@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HeaderView from './components/HeaderView.vue';
-import FooterView from './components/FooterView.vue';
+import HeaderView from './components/HeaderView.vue'
+import FooterView from './components/FooterView.vue'
 </script>
 
 <template>
   <header>
     <HeaderView />
   </header>
+
+  <hr class="h-1 w-full" />
 
   <div class="content">
     <RouterView />
