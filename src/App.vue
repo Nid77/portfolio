@@ -15,6 +15,8 @@ import FooterView from './components/FooterView.vue'
     <RouterView />
   </div>
 
+  <hr class="h-1 w-full mt-8" />
+
   <footer>
     <FooterView />
   </footer>
