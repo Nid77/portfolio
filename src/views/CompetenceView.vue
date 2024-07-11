@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#16161a] rounded p-20">
+  <div class=" rounded p-20 bg-pan-left">
     <h1 class="text-6xl text-white text-center font-bold">Mes Compétences</h1>
 
     <h2 class="text-2x1 text-center text-white p-8">
@@ -8,20 +8,12 @@
   </div>
 
   <div v-if="competences" class="competences">
-    <div
-      v-for="competence in competences"
-      :key="competence.nom_competence"
-      :id="competence.nom_competence"
-      class="competence text-3x1"
-    >
+    <div v-for="competence in competences" :key="competence.nom_competence" :id="competence.nom_competence"
+      class="competence text-3x1" :style="'background-color :' + competence.bg_color">
       <div>
         <h4>{{ competence.nom_competence }}</h4>
-        <button
-          class="font-bold defilement"
-          type="button"
-          :value="competence.nom_competence"
-          @click="toggleDetail(competence.nom_competence)"
-        >
+        <button class="font-bold defilement" type="button" :value="competence.nom_competence"
+          @click="toggleDetail(competence.nom_competence)">
           {{ activeCompetence === competence.nom_competence ? '-' : '+' }}
         </button>
       </div>
@@ -41,10 +33,7 @@
         </div>
 
         <hr :class="{ bar: competence.projets && competence.projets.length > 0 }" id="bar" />
-        <h4
-          v-if="competence.projets && competence.projets.length > 0"
-          class="self-center font-bold defilement text-4x1"
-        >
+        <h4 v-if="competence.projets && competence.projets.length > 0" class="self-center font-bold defilement text-4x1">
           Projets
         </h4>
 
@@ -60,11 +49,11 @@
   </div>
   <div v-else-if="error" class="text-3xl text-color-red">{{ error }}</div>
 
-  <div>
+  <div class="flex items-center flex-col">
     <h2 class="text-2xl text-center text-white p-8 bg-[#16161a] rounded p-8">
-      Les technologies que j'ai utilisé durant mes années d'études
+      Les technologies que j'ai utilisé durant mes années d'études, mes experiences et mes projets personnels
     </h2>
-    <TechnologiesList :technologies="technos" class="technos" />
+    <TechnologiesList :technologies="technos" />
   </div>
 </template>
 
@@ -80,6 +69,7 @@ interface Competence {
   liste: string[]
   recul_reflexif: string
   projets: Projet[]
+  bg_color: string
 }
 
 interface Projet {
@@ -138,15 +128,4 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-.technos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 12px;
-  border-radius: 8px;
-  width: 100%;
-}
-</style>
+<style scoped></style>

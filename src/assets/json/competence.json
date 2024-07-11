@@ -35,7 +35,8 @@
             "img":"annuaire.png"
           }
         ],
-        "recul_reflexif":"Je maitrise differents langages grace a mes diffrents projets comme la liste de course ou l'aplication mobile de meteo. De plus, grace au projet 12cm3 j'ai pu apprendre a faire une API."
+        "recul_reflexif":"Je maitrise differents langages grace a mes diffrents projets comme la liste de course ou l'aplication mobile de meteo. De plus, grace au projet 12cm3 j'ai pu apprendre a faire une API.",
+        "bg_color":"#c00000"
       },
       {
         "nom_competence": "Optimisation des applications informatiques",
@@ -47,7 +48,8 @@
           "Utiliser des techniques algorithmiques adaptées",
           "Anticiper les résultats d’un algo (temps d’exécution, espace mémoire, …)",
           "Optimiser des algos"
-        ]
+        ],
+        "bg_color":"#f79152"
       },
       {
         "nom_competence": "Gérer des données de l’informations",
@@ -58,7 +60,8 @@
           "Optimiser les modèles de données de l'entreprise",
           "Assurer la confidentialité des données (intégrité et sécurité)",
           "Organiser la restitution de données à travers la programmation et la visualisation"
-        ]
+        ],
+        "bg_color":"#92d050"
       },
       {
         "nom_competence": "Travailler dans une équipe informatique",
@@ -68,7 +71,8 @@
           "Connaître et savoir appliquer les différentes méthodes de développement",
           "Utiliser des systèmes de gestion de code source pour organiser son travail",
           "Faire une veille technologique, être toujours informé sur l’actualité dans l’informatique"
-        ]
+        ],
+        "bg_color":"#1e1c11"
       },{
         "nom_competence":"Administrer des systèmes informatiques communicants complexes",
         "liste": [
@@ -81,7 +85,8 @@
         "Mettre en œuvre les corrections et solutions adaptées",
         "Respecter les contraintes de performances / de coûts / d’efficacité",
         "Assurer la pérennité des données et du code"
-        ]
+        ],
+        "bg_color":"#ffc000"
       },{
         "nom_competence" :"Conduire un projet",
         "liste": [
@@ -91,7 +96,8 @@
         "Communiquer de manière efficace avec les acteurs du projet",
         "Gestion des risques et du temps (Identifier les risques potentiels tout au long du projet et prendre des mesures pour les minimiser)",
         "Évaluer les résultats et étudier les points qui pourraient être améliorés pour les prochains projet"
-        ]
+        ],
+        "bg_color":"#002060"
       }
     ]
   }

@@ -17,8 +17,8 @@
     </div>
 
     <h3 class="text-white font-bold text-4xl mb-12">Platfomre Admin</h3>
-    <h4 class="text-white font-bold text-2xl mb-12">Dans ce satge je devais realiser une platforme admin qui permet a des
-      non informaticiens d'effectuer des changements en base de données facilemment</h4>
+    <h4 class="text-white font-bold text-2xl mb-12">Dans ce stage, je devais réaliser une platforme admin qui permet a des
+      non informaticiens d'effectuer des changements en base de données facilemment.</h4>
     <div class="exp-projet grid grid-cols-3 gap-4">
       <img class="" src="@/assets/img/experience/GONEXA/page_statistiques.png"
         alt="capture d'ecran de la page des statistiques" />
@@ -32,40 +32,42 @@
 
     <div class="exp-competences text-white grid grid-cols-3 gap-4">
       <div class="exp-competence">
-        <h4>Competence : Réalisation d’application</h4>
+        <h4>Compétence : Réalisation d’application</h4>
         <h5>
           C'est avec la maitise de plusieurs lanages tel que Java et le C qui m'ont aider a
           apprendre d'autre langages utilisé par l'entreprise. De plus j'ai realisé une documenttation du projet.
         </h5>
       </div>
       <div class="exp-competence">
-        <h4>Competences : Optimisation des applications informatiques</h4>
+        <h4>Compétence : Optimisation des applications informatiques</h4>
         <h5>Dans la recuperation des statistiques, recupérer toute les données necéssaires, puis appliquer du traitement
-          etant donné que le nombre de donne n'est pas tres important</h5>
+          etant donné que le nombre de donne n'est pas tres important.</h5>
       </div>
       <div class="exp-competence">
-        <h4>Competence : Gérer des données de l’informations</h4>
+        <h4>Compétence : Gérer des données de l’informations</h4>
         <h5>
-          Dans ce stage je me suis retouve confronté a des bases de données afin de realiser un
+          Dans ce stage, je me suis retouve confronté a des bases de données (notamment celui de Saleforces et de Azure)
+          afin de realiser un
           projet.
         </h5>
       </div>
       <div class="exp-competence">
-        <h4>Competence : Travailler dans une équipe informatique</h4>
+        <h4>Compétence : Travailler dans une équipe informatique</h4>
         <h5>
-          C'est avec ce stage que j'ai pu voir le trvail de plusieurs developpeur dans des projets.
+          C'est avec ce stage que j'ai pu voir le travail en equipe avec plusieurs developpeur dans des projets.
           De plus, je me suis retrouvé avec un autre stagiaire sur le meme projet, j'ai pu
           experimenter le travail dans une equipe informatique.
         </h5>
       </div>
       <div class="exp-competence">
-        <h4>Competence : Administrer des systèmes informatiques communicants complexes</h4>
-        <h5>Dans la patforme admin , je me suis retouvé a configurer des methodes de requetes pour la partie backend du
+        <h4>Compétence : Administrer des systèmes informatiques communicants complexes</h4>
+        <h5>Dans la patforme admin, je me suis retouvé a configurer des methodes de requetes (GET,POST,PU,DELETE) pour la
+          partie backend du
           projet.</h5>
       </div>
       <div class="exp-competence">
-        <h4>Competence : Conduire un projet</h4>
-        <h5>J'ai pu mettre en pratique la methode agile suivi dans ma formtion</h5>
+        <h4>Compétence : Conduire un projet</h4>
+        <h5>J'ai pu mettre en pratique la methode agile.</h5>
       </div>
     </div>
 

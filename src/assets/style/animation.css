@@ -68,3 +68,20 @@ animation: text-pop-up-top 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
   
+
+/*Animation bg gradient hozizontal*/
+@keyframes bg-pan-left {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg-pan-left {
+    background-size: 600% 100%;
+    background: linear-gradient(to right, #282524, #372b3f);
+	animation: bg-pan-left 8s infinite both;
+    
+}

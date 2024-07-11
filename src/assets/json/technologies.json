@@ -178,7 +178,7 @@
       "projets": ["Projet1", "Projet2"]
     },{
       "nom": "Android Studio",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Android_Studio_icon.svg",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg",
       "lien": "https://developer.android.com/studio",
       "tags": ["IDE", "Java", "Kotlin", "Android"],
       "projets": ["Projet3", "Projet4"]

@@ -14,5 +14,5 @@ export default defineConfig({
   },
   build: {
     outDir: path.resolve(__dirname, '../dist') // Utilise __dirname pour définir le chemin absolu
-  }
+  },
 })
