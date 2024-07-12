@@ -29,16 +29,6 @@
    height: 50%;
 }
 
-/* 
-
-Pour la version avec tab 
-
-.header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-} */
 
 #bar.bar {
     display: flex;

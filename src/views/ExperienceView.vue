@@ -1,36 +1,73 @@
-<template>
-  <div class="bg-[#16161a] rounded p-20 text-white text-center">
-    <h1 class="text-6xl font-bold">Mes Experiences</h1>
+<script lang="ts">
 
-    <h2 class="text-2xl p-8">
-      Les competences que jai acquis durant mes experiences professionnelles
-    </h2>
+import { defineComponent, ref, computed } from 'vue';
+import 'flowbite';
+import experienceData from '@/assets/json/experiences.json';
+
+interface Experience {
+  type: string
+  poste: string
+  entreprise: string
+  date: string
+  description: string
+  competences: string[]
+  retour: string
+}
+
+export default defineComponent({
+  name: 'ExperienceList',
+  setup() {
+    const experiences = ref<Experience[]>([]);
+    const error = ref<string | null>(null);
+    try {
+      experiences.value = (experienceData as any).experiences;
+    } catch (err) {
+      error.value = 'Erreur lors du chargement du fichier JSON';
+    }
+
+    return { experiences, error };
+  },
+});
+
+</script>
+
+<template>
+  <div class="bg-[#43454b] rounded p-20 text-white text-center">
+    <h1 class="text-6xl font-bold">Mes Experiences</h1>
   </div>
 
-  <div class="exp">
-    <div class="persentation mb-8 text-white flex flex-col gap-8">
-      <img class="" src="@/assets/img/experience/GONEXA/Logo rectangle négatif.png" alt="logo de GONEXA" />
-      <h3 class="text-4xl">TYPE : STAGE </h3>
-      <h3 class="text-4xl">POSTE : Developpeur Fullstack</h3>
-      <h4>Du 15/04/2024 au 05/07/2024</h4>
-      <p></p>
+  <div class="exp ">
+    <div class="text-white flex flex-row gap-8">
+      <div class="w-1/3 flex items-center justify-center">
+        <img src="@/assets/img/experience/GONEXA/Logo rectangle négatif.png" alt="logo de GONEXA" />
+      </div>
+      <div class="flex flex-col text-left w-2/3">
+        <h3 class="">TYPE : STAGE </h3>
+        <h3 class="">POSTE : Developpeur Fullstack</h3>
+        <h3 class="">ENTREPRISE : GONEXA</h3>
+        <h3>DATE : Du 15/04/2024 au 05/07/2024</h3>
+        <h3>DESCRIPTION : Dev</h3>
+      </div>
     </div>
 
-    <h3 class="text-white font-bold text-4xl mb-12">Platfomre Admin</h3>
-    <h4 class="text-white font-bold text-2xl mb-12">Dans ce stage, je devais réaliser une platforme admin qui permet a des
-      non informaticiens d'effectuer des changements en base de données facilemment.</h4>
-    <div class="exp-projet grid grid-cols-3 gap-4">
+    <!-- <div class="exp-projet grid grid-cols-3 gap-4">
       <img class="" src="@/assets/img/experience/GONEXA/page_statistiques.png"
         alt="capture d'ecran de la page des statistiques" />
       <img class="" src="@/assets/img/experience/GONEXA/page_liste_comptes.png"
         alt="capture d'ecran de la page des comptes" />
       <img class="" src="@/assets/img/experience/GONEXA/page_compte_client.png"
         alt="capture d'ecran de la page d'un compte client" />
+    </div> -->
+    <div class="flex gap-4">
+      <button class="bg-[#cab2b2] p-4 rounded-lg">Voir les competences de mon BUT mise en oeuvre.</button>
+      <button class="bg-[#cab2b2] p-4 rounded-lg">Voir le retour de mon experience</button>
     </div>
 
-    <hr class="h-1 w-3/4 m-12" />
 
-    <div class="exp-competences text-white grid grid-cols-3 gap-4">
+
+
+
+    <!-- <div class="exp-competences text-white grid grid-cols-3 gap-4">
       <div class="exp-competence">
         <h4>Compétence : Réalisation d’application</h4>
         <h5>
@@ -69,7 +106,7 @@
         <h4>Compétence : Conduire un projet</h4>
         <h5>J'ai pu mettre en pratique la methode agile.</h5>
       </div>
-    </div>
+    </div> -->
 
 
   </div>
@@ -82,11 +119,12 @@
   align-items: center;
   justify-content: center;
   justify-self: center;
-  padding: 2rem;
-  margin: 2rem;
   border: 2px solid #03212f;
   background-color: #03212f;
   border-radius: 0.5rem;
+  gap: 2rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .exp-competence h4 {

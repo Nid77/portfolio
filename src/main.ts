@@ -3,6 +3,7 @@ import 'flowbite'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { defineComponent, onMounted, watch } from 'vue';
 import { initializeObserver } from './animation'
 
 import App from './App.vue'
@@ -13,8 +14,9 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
-app.mount('#app')
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeObserver();
+watch(router.currentRoute, () => {
+  initializeObserver();
 });
+
+app.mount('#app')

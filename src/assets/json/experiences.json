@@ -1,0 +1,14 @@
+{
+    "experiences":[
+        {
+            "poste":"Développeur Full Stack",
+            "type":"stage",
+            "entreprise":"GONEXA",
+            "dateDebut":"15/05/2024",
+            "dateFin":"05/07/2024",
+            "description":"Développement d'une platforme admin pour la gestion des donnees des clients",
+            "logo_entreprise":"gonexa.png"
+        }
+        
+    ]
+}
