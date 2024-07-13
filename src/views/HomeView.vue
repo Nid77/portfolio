@@ -35,7 +35,7 @@ import '@/assets/style/acceuil.css'
     </section>
 
     <section id="projet" class="projets flex flex-col items-center text-center">
-      <h1 class="text-4xl font-extrabold text-white text-center">Mes projets</h1>
+      <h1 class="text-5xl font-extrabold text-white text-center">Quelques projets</h1>
 
       <section class="anim-fade-in">
         <h2 class="text-2xl font-extrabold text-white">Jeux-Vidéo</h2>
