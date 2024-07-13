@@ -4,8 +4,17 @@ import '@/assets/style/acceuil.css'
 
 <template>
   <div class="acceuil">
-    <div class="head text-white h-screen w-full flex flex-col items-center gap-12 anim-text-pop-up-top ">
-      <h1 class="text-9xl p-4 rounded-md mt-36 ">Mon Portfolio</h1>
+    <div class="head text-white h-screen w-full flex flex-col items-center gap-12 ">
+      <h1 class="text-9xl p-4 bg-[#17375e] rounded-md mt-36 anim-text-pop-up-top ">Mon Portfolio</h1>
+      <h2 class="text-4xl anim-typewriter ">Bienvenue sur mon portfolio</h2>
+      <div class="scroll-down">
+        <svg class="arrows">
+          <path class="a1" d="M0 0 L30 32 L60 0"></path>
+          <path class="a2" d="M0 20 L30 52 L60 20"></path>
+          <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+      </div>
+
     </div>
 
     <section id="qui-suis-je"
@@ -15,7 +24,7 @@ import '@/assets/style/acceuil.css'
         <h2 class="text-5xl font-extrabold">Qui suis-je ?</h2>
       </div>
       <div>
-        <p class="text-2xl">
+        <p class="text-2xl text-left">
           Je m'appelle Rayan et je suis actuellement un
           <strong>étudiant en 2éme année de BUT INFORMATIQUE.</strong> Je suis une personne
           curieuse des nouvelles avancées informatiques. Ce que j'aime faire, c'est des projets

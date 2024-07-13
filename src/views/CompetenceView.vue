@@ -70,12 +70,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class=" rounded p-20 bg-[#43454b]">
+  <div class="p-20">
     <h1 class="text-6xl text-white text-center font-bold">Mes Compétences</h1>
   </div>
 
-  <div class="bg-[#17375e] rounded p-4 w-2/3 text-white text-left text-4xl self-center">
-    <h2>Référentiel de compétences du <span>B.U.T Informatique</span></h2>
+  <div class="bg-[#17375e] rounded p-4 w-2/3 text-white text-left text-3xl self-center">
+    <h2>Référentiel de compétences du <span class="font-bold">B.U.T Informatique</span></h2>
     <h2><span class="font-bold">Parcours</span> Réalisation d’applications : conception, développement,validation</h2>
   </div>
 
@@ -122,8 +122,8 @@ export default defineComponent({
   <div v-else-if="error" class="text-3xl text-color-red">{{ error }}</div>
 
   <div class="flex items-center flex-col gap-2">
-    <h2 class="text-2xl text-center text-white p-8 bg-[#16161a] rounded p-8 w-full">
-      Les technologies que j'ai utilisé durant mes années d'études, mes experiences et mes projets personnels
+    <h2 class="text-2xl text-center text-white p-8 bg-[#16161a] p-8 w-full">
+      Les technologies que j'ai utilisé durant mes années d'études, mes experiences et mes projets personnels.
     </h2>
     <TechnologiesList :technologies="technos" />
   </div>

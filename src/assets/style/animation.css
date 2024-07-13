@@ -1,10 +1,9 @@
 [class*="anim"]{
     opacity: 0;
 }
-
 .animate {
     opacity: 1;
-  }
+}
 
 /* Animation texte vers le haut*/
 @keyframes text-pop-up-top {
@@ -50,7 +49,7 @@ animation: text-pop-up-top 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 /* Animation de fade in*/
 .anim-fade-in.animate {
     transition: opacity 0.5s ease-in-out; 
-  }
+}
 
 /* Animation texte vers la gauche*/
 @keyframes slide-in-left {
@@ -69,19 +68,69 @@ animation: text-pop-up-top 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
   
 
-/*Animation bg gradient hozizontal*/
-@keyframes bg-pan-left {
-    0% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+
+/* Animation  typewriter*/
+.anim-typewriter{
+    position: relative;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{max-width: 0;}
+    to{max-width: 100%}
 }
 
-.bg-pan-left {
-    background-size: 600% 100%;
-    background: linear-gradient(to right, #282524, #372b3f);
-	animation: bg-pan-left 8s infinite both;
-    
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+}
+
+
+/* Animation arrow*/
+.arrows {
+    width: 60px;
+    height: 72px;
+}
+
+.arrows path {
+    stroke: #ffffff;
+    fill: transparent;
+    stroke-width: 1px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+.arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; 
+}
+
+.arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; 
+}
+
+.arrows path.a3 { 
+    animation-delay:0s;
+    -webkit-animation-delay:0s; 
 }

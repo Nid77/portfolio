@@ -32,7 +32,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="bg-[#43454b] rounded p-20 text-white text-center">
+  <div class="p-20 text-white text-center">
     <h1 class="text-6xl font-bold">Mes Experiences</h1>
   </div>
 
