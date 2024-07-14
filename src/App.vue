@@ -9,7 +9,6 @@ import FooterView from './components/FooterView.vue'
     <HeaderView />
   </header>
 
-  <hr class="h-1 w-full" />
 
   <div class="content">
     <RouterView />

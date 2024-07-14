@@ -71,7 +71,7 @@ export default defineComponent({
 
 <template>
   <div class="p-20">
-    <h1 class="text-6xl text-white text-center font-bold">Mes Compétences</h1>
+    <h1 class="text-6xl text-white text-center font-bold anim-entrance-text">Mes Compétences</h1>
   </div>
 
   <div class="bg-[#17375e] rounded p-4 w-2/3 text-white text-left text-3xl self-center">

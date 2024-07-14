@@ -60,10 +60,11 @@ export default defineComponent({
 
 <template>
   <div class="p-20 text-white text-center">
-    <h1 class="text-6xl font-bold">Mes Experiences</h1>
+    <h1 class="text-6xl font-bold anim-entrance-text">Mes Experiences</h1>
   </div>
+
   <div class="exps flex flex-col items-center">
-    <div class="exp" v-for="(exp, index) in      experiences     " :key="index">
+    <div class="exp" v-for="(exp, index) in experiences" :key="index">
       <div class="text-white w-5/6 flex flex-row gap-2 ">
         <div class="w-1/3 flex items-center justify-center border-r-4 border-white-500 p-4">
           <img :src="getImage(exp.logo_entreprise)" alt="logo de l'entreprise" />
