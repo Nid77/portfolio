@@ -1,6 +1,6 @@
 <template>
     <div class="tabs flex flex-col text-white w-1/2 mt-4">
-        <ul class="flex flex-row justify-around gap-4">
+        <ul class="flex flex-row justify-around gap-4 overflow-x-auto">
             <li v-for=" (techList, category) in technologies"
                 :class="['p-4', { 'border-b-4 border-blue-500': activeTab === category }]"><button
                     @click="activateTab(category)">{{
@@ -9,7 +9,7 @@
         </ul>
         <hr class="h-2 w-full mb-2" />
         <div>
-            <div class="langages grid grid-cols-4 gap-4">
+            <div class="langages grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div v-for="techno in paginatedTechnologies" :key="techno.nom"
                     class="bg-[#16161a] flex flex-col text-center items-center justify-center bg-black-500 text-2x1 p-4 rounded-lg">
                     <a :href="techno.lien">

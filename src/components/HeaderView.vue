@@ -47,7 +47,7 @@ export default {
 
     <nav
       :class="{ 'translate-x-0': (isMenuOpen && windowWidth < 786) || windowWidth >= 786, 'translate-x-full': !isMenuOpen && !(windowWidth >= 786) }"
-      class="fixed md:absolute transform transition-transform duration-300 right-0 h-screen w-3/4 md:flex md:w-auto md:h-auto bg-red-500 md:bg-black text-white z-50 ">
+      class="fixed md:absolute transform transition-transform duration-300 right-0 h-screen w-3/4 md:flex md:w-auto md:h-auto bg-[#212121] md:bg-black text-white z-50 ">
 
       <ul class="flex flex-col items-center md:flex-row md:items-end mr-4">
         <li @click="isMenuOpenFalse" class=" text-white p-2 ">
@@ -69,9 +69,13 @@ export default {
       </ul>
     </nav>
 
-    <!-- Bouton pour ouvrir/fermer le menu -->
-    <button @click="toggleMenu" class=" relative text-white items-end z-50 md:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button @click="toggleMenu" class="relative text-white items-end z-50 md:hidden">
+      <svg v-if="isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
     </button>
