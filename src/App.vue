@@ -5,10 +5,7 @@ import FooterView from './components/FooterView.vue'
 </script>
 
 <template>
-  <header>
-    <HeaderView />
-  </header>
-
+  <HeaderView />
 
   <div class="content">
     <RouterView />

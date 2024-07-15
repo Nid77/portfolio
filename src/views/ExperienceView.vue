@@ -60,7 +60,7 @@ export default defineComponent({
 
 <template>
   <div class="p-20 text-white text-center">
-    <h1 class="text-6xl font-bold anim-entrance-text">Mes Experiences</h1>
+    <h1 class="text-4xl md:text-6xl font-bold anim-entrance-text">Mes Experiences</h1>
   </div>
 
   <div class="exps flex flex-col items-center">

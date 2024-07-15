@@ -71,12 +71,12 @@ export default defineComponent({
 
 <template>
   <div class="p-20">
-    <h1 class="text-6xl text-white text-center font-bold anim-entrance-text">Mes Compétences</h1>
+    <h1 class="text-4xl md:text-6xl text-white text-center font-bold anim-entrance-text">Mes Compétences</h1>
   </div>
 
   <div class="bg-[#17375e] rounded p-4 w-2/3 text-white text-left text-3xl self-center">
-    <h2>Référentiel de compétences du <span class="font-bold">B.U.T Informatique</span></h2>
-    <h2><span class="font-bold">Parcours</span> Réalisation d’applications : conception, développement,validation</h2>
+    <h2>Référentiel de compétences du <span class=" font-bold">B.U.T Informatique.</span></h2>
+    <h2><span class="font-bold">Parcours</span> Réalisation d’applications : conception, développement, validation.</h2>
   </div>
 
   <div v-if="competences" class="competences">

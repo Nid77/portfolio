@@ -5,8 +5,8 @@ import '@/assets/style/acceuil.css'
 <template>
   <div class="acceuil">
     <div class="head text-white h-screen w-full flex flex-col items-center gap-12 ">
-      <h1 class="text-9xl p-4 bg-[#17375e] rounded-md mt-36 anim-text-pop-up-top ">Mon Portfolio</h1>
-      <h2 class="text-4xl anim-typewriter ">Bienvenue sur mon portfolio</h2>
+      <h1 class="text-4xl md:text-9xl p-4 bg-[#17375e] rounded-md mt-36 anim-text-pop-up-top ">Mon Portfolio</h1>
+      <h2 class="text-3xl md:text-4xl anim-typewriter ">Bienvenue sur mon portfolio</h2>
       <div class="scroll-down">
         <svg class="arrows">
           <path class="a1" d="M0 0 L30 32 L60 0"></path>
