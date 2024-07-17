@@ -38,7 +38,7 @@ export default {
 </script>
 
 <template>
-  <div class="flex lex-row text-white justify-between p-4 w-full relative overflow">
+  <div class="flex lex-row text-white justify-between p-4 w-full relative overflow-hidden">
     <div class="flex items-center gap-2">
       <img src="@/assets/img/icon/nid77.jpg" alt="Logo" class=" w-12 h-12 object-cover rounded-full" />
       <h1 class="text-3xl font-semibold ">Portfolio</h1>
@@ -46,23 +46,23 @@ export default {
 
 
     <nav
-      :class="{ 'translate-x-0': (isMenuOpen && windowWidth < 786) || windowWidth >= 786, 'translate-x-full': !isMenuOpen && !(windowWidth >= 786) }"
-      class="fixed md:absolute transform transition-transform duration-300 right-0 h-screen w-3/4 md:flex md:w-auto md:h-auto bg-[#212121] md:bg-black text-white z-50 ">
+      :class="{ 'translate-x-0': (isMenuOpen && windowWidth < 768) || windowWidth >= 768, 'translate-x-full': !isMenuOpen && !(windowWidth >= 768) }"
+      class="fixed md:absolute transform transition-transform duration-300 right-0 h-auto w-3/4 md:flex md:w-auto md:h-auto bg-[#212121] md:bg-black text-white z-50 ">
 
-      <ul class="flex flex-col items-center md:flex-row md:items-end mr-4">
-        <li @click="isMenuOpenFalse" class=" text-white p-2 ">
+      <ul class="flex flex-col items-center text-white font-bold text-2xl md:flex-row md:items-end mr-4">
+        <li @click="isMenuOpenFalse" class="p-2">
           <RouterLink to="/">Accueil</RouterLink>
         </li>
-        <li @click="isMenuOpenFalse" class=" text-white p-2">
+        <li @click="isMenuOpenFalse" class="p-2">
           <RouterLink to="/projets">Projets</RouterLink>
         </li>
-        <li @click="isMenuOpenFalse" class=" text-white p-2 ">
+        <li @click="isMenuOpenFalse" class="p-2">
           <RouterLink to="/competences">Compétences</RouterLink>
         </li>
-        <li @click="isMenuOpenFalse" class=" text-white p-2 ">
+        <li @click="isMenuOpenFalse" class="p-2">
           <RouterLink to="/experiences">Experiences</RouterLink>
         </li>
-        <li @click="isMenuOpenFalse" class=" text-white p-2 ">
+        <li @click="isMenuOpenFalse" class="p-2">
           <RouterLink to="/contact">Contact</RouterLink>
         </li>
 

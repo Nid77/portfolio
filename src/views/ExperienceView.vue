@@ -64,9 +64,9 @@ export default defineComponent({
   </div>
 
   <div class="exps flex flex-col items-center">
-    <div class="exp" v-for="(exp, index) in experiences" :key="index">
-      <div class="text-white w-5/6 flex flex-row gap-2 ">
-        <div class="w-1/3 flex items-center justify-center border-r-4 border-white-500 p-4">
+    <div class="exp flex-col md:flex-row" v-for="(exp, index) in experiences" :key="index">
+      <div class="text-white w-5/6 flex flex-col md:flex-row gap-4 md:gap-2 ">
+        <div class="md:w-1/3 flex items-center justify-center md:border-r-4 border-white-500 p-4">
           <img :src="getImage(exp.logo_entreprise)" alt="logo de l'entreprise" />
         </div>
         <div class="flex flex-col text-left w-2/3">
@@ -78,7 +78,7 @@ export default defineComponent({
         </div>
       </div>
       <button @click="openModal" :disabled="new Date(exp.dateFin) > new Date()" :value="index"
-        class="bg-[#cab2b2] w-1/6 float-right whitespace-nowrap p-4 rounded-lg">{{
+        class="bg-[#cab2b2] md:w-1/6 float-right whitespace-nowrap p-4 rounded-lg">{{
           new Date(exp.dateFin) <= new Date() ? "En savoir plus →" : " Pas de detail" }} </button>
     </div>
   </div>
@@ -97,7 +97,6 @@ export default defineComponent({
 <style scoped>
 .exp {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   border: 2px solid #03212f;
