@@ -121,9 +121,10 @@ export default defineComponent({
   </div>
   <div v-else-if="error" class="text-3xl text-color-red">{{ error }}</div>
 
-  <div class="flex items-center flex-col gap-2">
-    <h2 class="text-2xl text-center text-white p-8 bg-[#16161a] p-8 w-full">
-      Les technologies que j'ai utilisé durant mes années d'études, mes experiences et mes projets personnels.
+  <div class="flex items-center flex-col gap-2 mt-8">
+    <h2 class="bg-[#17375e] rounded p-4 w-2/3 text-white text-left text-3xl self-center">
+      <span class=" font-bold">Les technologies</span> que j'ai utilisé durant mes années d'études, mes experiences et mes
+      projets personnels.
     </h2>
     <TechnologiesList :technologies="technos" />
   </div>

@@ -6,7 +6,6 @@
     <div class="m-4">
         <div class="flex flex-col items-start text-white">
             <p>Pour me contacter, vous pouvez m'envoyer un email !</p>
-
             <p>Email : ray.tcontact@protonmail.com</p>
 
             <h2 class="mt-4">Mes réseaux sociaux</h2>
@@ -19,7 +18,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://github.com/Nid77">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
                         <p>GITHUB</p>
                     </a>

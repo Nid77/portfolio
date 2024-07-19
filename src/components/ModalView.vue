@@ -6,7 +6,7 @@
                 {{ title }}
             </h3>
             <hr class="border-t border-2 border-gray-300 w-3/4">
-            <div class="p-4" style="max-height: 70vh; overflow-y: auto;">
+            <div class="p-4 m-2" style="max-height: 70vh; overflow-y: auto;">
                 <slot></slot>
             </div>
             <hr class="border-t border-2 border-gray-300 w-3/4">

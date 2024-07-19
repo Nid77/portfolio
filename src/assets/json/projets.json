@@ -3,7 +3,8 @@
         {
             "nom":"",
             "description":"",
-            "image":""
+            "image":"",
+            "categorie":""
         }
     ]
 }

@@ -28,16 +28,6 @@
             "description":"Sujet d'alternance",
             "logo_entreprise":"GONEXA/Logo rectangle négatif.png",
             "Retour":""
-        },
-        {
-            "poste":"Développeur TEST",
-            "type":"TEST",
-            "entreprise":"TEST",
-            "dateDebut":"5/08/2024",
-            "dateFin":"01/09/2023",
-            "description":"Sujet de TEST",
-            "logo_entreprise":"image.png",
-            "Retour":""
         }
         
     ]

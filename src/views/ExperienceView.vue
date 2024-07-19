@@ -64,12 +64,12 @@ export default defineComponent({
   </div>
 
   <div class="exps flex flex-col items-center">
-    <div class="exp flex-col md:flex-row" v-for="(exp, index) in experiences" :key="index">
-      <div class="text-white w-5/6 flex flex-col md:flex-row gap-4 md:gap-2 ">
+    <div class="exp md:items-center flex-col md:flex-row" v-for="(exp, index) in experiences" :key="index">
+      <div class="text-white md:w-5/6 flex flex-col md:flex-row gap-4 md:gap-2 ">
         <div class="md:w-1/3 flex items-center justify-center md:border-r-4 border-white-500 p-4">
           <img :src="getImage(exp.logo_entreprise)" alt="logo de l'entreprise" />
         </div>
-        <div class="flex flex-col text-left w-2/3">
+        <div class="flex flex-col text-left md:w-2/3">
           <h3 class="">TYPE : {{ exp.type }} </h3>
           <h3 class="">POSTE : {{ exp.poste }} </h3>
           <h3 class="">ENTREPRISE : {{ exp.entreprise }} </h3>
@@ -85,7 +85,7 @@ export default defineComponent({
 
 
   <Modal :isOpen="isModalOpen" title="Detail de l'experience" @close="closeModal">
-    <div class="exp-competences text-white grid grid-cols-3 gap-4">
+    <div class="exp-competences text-white flex flex-col md:grid md:grid-cols-3 gap-4">
       <div v-for=" cmp in experiences[activeExperience].competences" class="exp-competence">
         <h4>{{ cmp.competence }}</h4>
         <h5> {{ cmp.explication }}</h5>
@@ -97,7 +97,6 @@ export default defineComponent({
 <style scoped>
 .exp {
   display: flex;
-  align-items: center;
   justify-content: space-around;
   border: 2px solid #03212f;
   background-color: #03212f;
