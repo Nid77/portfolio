@@ -21,7 +21,7 @@ import '@/assets/style/acceuil.css'
       class="flex flex-col md:flex-row items-center h-screen md:justify-between p-4 gap-4 self-center text-white">
       <div class="flex flex-col items-center md:w-full">
         <img src="@/assets/img/icon/nid77.jpg" alt="12"
-          class="w-1/2 h-1/2 object-cover rounded-full mb-4 anim-roll-in-left" />
+          class="w-1/2 md:h-1/2 object-cover rounded-full mb-4 anim-roll-in-left" />
         <h2 class="text-5xl font-extrabold anim-slide-in-left">Qui suis-je ?</h2>
       </div>
       <div class="anim-slide-in-right">

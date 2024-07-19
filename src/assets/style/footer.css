@@ -3,10 +3,11 @@ footer{
     left: 0;
     bottom: 0;
     width: 100%;
+    padding: 1rem;
     gap: 10px;
     text-align: center;
-   }
+}
 
 footer p{
-    color: white;
+    color: azure;
 }

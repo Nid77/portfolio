@@ -5,31 +5,9 @@ header {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: black;
     color: azure;
     gap: 1rem;
     width: 100%;
     padding: 1.25rem;
 }
 
-header a{
-    font-size: 1.5rem;
-}
-
-
-header .social-icons {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin: 1rem;
-}
-
-.icon {
-    font-size: 2.5rem;
-    color:white;
-    text-decoration: none;
-}
-
-.icon:hover {
-    color: #007bff;
-}

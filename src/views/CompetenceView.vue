@@ -35,35 +35,43 @@ export default defineComponent({
   setup() {
     const competences = ref<Competence[]>([])
     const error = ref<string | null>(null)
-    const activeCompetence = ref<string | null>(null)
+    const activeCompetence = ref<string>("")
 
     onMounted(() => {
       try {
         competences.value = (competenceData as any).competences
+        competence.value = competences.value[0];
       } catch (err) {
         error.value = 'Erreur lors du chargement du fichier JSON'
       }
     })
 
-    const toggleDetail = (competenceName: string) => {
-      if (activeCompetence.value === competenceName) {
-        activeCompetence.value = null
-      } else {
-        activeCompetence.value = competenceName
-      }
-    }
-
     function getImage(img: string) {
       return new URL(`../assets/img/projet-BUT/${img}`, import.meta.url).href
     }
 
+    const activeTab = ref('Langages');
+    const activateTab = (tabName: string) => {
+      activeTab.value = tabName;
+      competence.value = competences.value.find(competence => competence.nom_competence === tabName) as Competence;
+    };
+
+    const competence = ref<Competence>({
+      nom_competence: "",
+      liste: [],
+      recul_reflexif: "",
+      projets: [],
+      bg_color: ""
+    });
+
     return {
       competences,
       error,
-      activeCompetence,
-      toggleDetail,
       technos: technologiesData as Record<string, Technology[]>,
-      getImage
+      getImage,
+      activeTab,
+      activateTab,
+      competence
     }
   }
 })
@@ -79,51 +87,57 @@ export default defineComponent({
     <h2><span class="font-bold">Parcours</span> Réalisation d’applications : conception, développement, validation.</h2>
   </div>
 
-  <div v-if="competences" class="competences">
-    <div v-for="competence in competences" :key="competence.nom_competence" :id="competence.nom_competence"
-      class="competence text-3x1" :style="'background-color :' + competence.bg_color">
-      <div>
-        <h4>{{ competence.nom_competence }}</h4>
-        <button class="font-bold defilement" type="button" :value="competence.nom_competence"
-          @click="toggleDetail(competence.nom_competence)">
-          {{ activeCompetence === competence.nom_competence ? '-' : '+' }}
-        </button>
-      </div>
-      <hr :class="{ bar: activeCompetence === competence.nom_competence }" id="bar" />
-      <div id="detail" :class="['', { visible: activeCompetence === competence.nom_competence }]">
-        <div class="details flex flex-row">
-          <div class="w-1/2">
-            <h5 class="font-bold mb-2">Competences :</h5>
-            <h5 v-for="item in competence.liste" :key="item">- {{ item }}</h5>
-          </div>
-          <div class="w-1/2 text-left">
-            <h5 class="font-bold mb-2">Recul reflexif :</h5>
-            <h5>
-              {{ competence.recul_reflexif }}
-            </h5>
-          </div>
-        </div>
+  <div v-if="competences" class="competences self-center w-5/6 h-screen">
+    <div class="header w-1/4 flex flex-col h-full">
+      <button v-for="comp in competences" :key="comp.nom_competence" :id="comp.nom_competence"
+        class="competence flex-1 text-3x1" :style="'background-color :' + comp.bg_color"
+        @click="activateTab(comp.nom_competence)">
+        <h4>{{ comp.nom_competence }}</h4>
+      </button>
+    </div>
+    <div class="content p-4 gap-4 w-3/4 h-full text-white border-l-4 border-white-500"
+      :style="'background-color :' + competence.bg_color">
 
-        <hr :class="{ bar: competence.projets && competence.projets.length > 0 }" id="bar" />
-        <h4 v-if="competence.projets && competence.projets.length > 0" class="self-center font-bold defilement text-4x1">
+      <div class="flex flex-row text-left p-2 gap-4">
+        <div class="w-1/2">
+          <h5 class="font-bold mb-2">Competences :</h5>
+          <h5 v-for="item in competence.liste" :key="item">- {{ item }}</h5>
+        </div>
+        <div class="w-1/2">
+          <h5 class="font-bold mb-2">Recul reflexif :</h5>
+          <h5>
+            {{ competence.recul_reflexif }}
+          </h5>
+        </div>
+      </div>
+
+      <div class=" w-full border-white-500 border-2 mt-4 mb-4" id="bar"></div>
+
+      <div v-if="competence.projets && competence.projets.length > 0">
+        <h4 class="self-center font-bold defilement text-4x1">
           Projets
         </h4>
 
-        <div v-if="competence.projets && competence.projets.length > 0" class="projets">
+        <div class="projets">
           <div v-for="projet in competence.projets" class="projet" :key="projet.nom_projet">
-            <img :src="getImage(projet.img)" alt="image du projet" />
+            <div>
+              <img :src="getImage(projet.img)" alt="image du projet" />
+            </div>
             <p class="">{{ projet.nom_projet }}</p>
             <p>{{ projet.description }}</p>
           </div>
         </div>
       </div>
     </div>
+
   </div>
-  <div v-else-if="error" class="text-3xl text-color-red">{{ error }}</div>
+  <div v-else class="text-3xl text-color-red">{{ error }}</div>
+
 
   <div class="flex items-center flex-col gap-2 mt-8">
     <h2 class="bg-[#17375e] rounded p-4 w-2/3 text-white text-left text-3xl self-center">
-      <span class=" font-bold">Les technologies</span> que j'ai utilisé durant mes années d'études, mes experiences et mes
+      <span class=" font-bold">Les technologies</span> que j'ai utilisé durant mes années d'études, mes experiences et
+      mes
       projets personnels.
     </h2>
     <TechnologiesList :technologies="technos" />

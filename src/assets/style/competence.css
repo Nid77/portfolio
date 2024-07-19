@@ -1,56 +1,27 @@
 
 .competences{
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
+    border: #ab9f9f 2px solid;
     align-items: center;
-    gap: 1rem;
 }
 .competence{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    border-radius: 0.5rem;
-    border: 3px solid #ab9f9f;
-    padding: 2rem;
-    width: 75%;
+    text-align: left;
+    border: 2px solid #ddd7d7;
+    padding: 1rem;
     color: #ffffff;
     gap: 1rem;
+    width: 100%;
 }
-
-.competence > div:first-child{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 5rem;
-}
-.competence > div:first-child button{
-    
-   justify-content: flex-end; 
-   height: 50%;
-}
-
 
 #bar.bar {
     display: flex;
     border: 0;
     height: 1px;
     background: #fffefe;
-    width: 100%;
-}
-
-#bar{
-    display: none;
-}
-
-#detail {
-    display: none;
-}
-
-#detail.visible {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 1rem;
+    width: 90%;
+    text-align: center;
+    margin: 1rem;
 }
 
 .projets{
@@ -59,6 +30,7 @@
     grid-auto-rows: 1fr;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
     justify-content: center;
 }
 
@@ -69,16 +41,14 @@
     align-items: center;
     border-radius: 0.5rem;
     border: 3px solid #ab9f9f;
-    height: 15rem; 
+    height: 10rem; 
     padding: 0.25rem;
     font-size: 1rem;
     color: #ffffff;
     gap: 1rem;
 }
-.projet img{
-    max-height: 50%;
-}
+
 .projet p{
-font-size: 0.8rem;
+font-size: 0.6rem;
 }
 
