@@ -18,7 +18,7 @@ import '@/assets/style/acceuil.css'
     </div>
 
     <section id="qui-suis-je"
-      class="flex flex-col md:flex-row items-center h-screen md:justify-between p-4 gap-4 self-center text-white">
+      class="flex flex-col md:flex-row items-center mb-48 md:justify-between p-4 gap-4 self-center text-white">
       <div class="flex flex-col items-center md:w-full">
         <img src="@/assets/img/icon/nid77.jpg" alt="12"
           class="w-1/2 md:h-1/2 object-cover rounded-full mb-4 anim-roll-in-left" />
