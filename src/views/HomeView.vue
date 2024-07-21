@@ -27,7 +27,7 @@ import '@/assets/style/acceuil.css'
       <div class="anim-slide-in-right">
         <p class="text-2xl text-left">
           Je m'appelle Rayan et je suis actuellement un
-          <strong>étudiant en 2éme année de BUT INFORMATIQUE.</strong> Je suis une personne
+          <strong>étudiant en BUT INFORMATIQUE.</strong> Je suis une personne
           curieuse des nouvelles avancées informatiques. Ce que j'aime faire, c'est des projets
           personnels ou en équipe qui me permet d'en apprendre plus dans le développement
           informatique.

@@ -11,9 +11,9 @@
         <div>
             <div class="langages grid grid-cols-2 md:grid-cols-6 gap-4">
                 <div v-for="techno in paginatedTechnologies" :key="techno.nom"
-                    class="bg-[#16161a] flex flex-col text-center items-center justify-center bg-black-500 text-2x1 p-4 rounded-lg">
+                    class="bg-[#242629] flex flex-col text-center items-center justify-center text-2x1 p-4 rounded-lg">
                     <a :href="techno.lien">
-                        <img :src="techno.image" class="bg-white h-24 w-24 mb-4" />
+                        <img :src="techno.image" class="h-24 w-24 mb-4" />
                         <h3>{{ techno.nom }}</h3>
                     </a>
                 </div>

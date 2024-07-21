@@ -12,7 +12,7 @@
 #projet section {
     display: flex;
     flex-direction: column;
-    background-color: #16161a;
+    background-color: var(--bg-secondary-color);
     padding: 10px;
     border-radius: 0.5rem;
     align-items: center;

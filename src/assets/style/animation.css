@@ -215,3 +215,22 @@ to{border-right-color: transparent;}
 	-webkit-animation: bounceIn 1.1s both;
 	        animation: bounceIn 1.1s both;
 }
+
+
+/* Animation de back and forth*/
+@keyframes backAndForth {
+  0% {
+    transform: translateX(70px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(70px);
+  }
+}
+
+.backandforth {
+  animation: backAndForth 2s infinite;
+  font-size: 2rem
+}

@@ -2,32 +2,19 @@
 .competences{
     display: flex;
     flex-direction:row;
-    border: #ab9f9f 2px solid;
     align-items: center;
 }
 .competence{
     text-align: left;
-    border: 2px solid #ddd7d7;
-    padding: 1rem;
     color: #ffffff;
-    gap: 1rem;
+    padding: 0.5rem;
     width: 100%;
 }
 
-#bar.bar {
-    display: flex;
-    border: 0;
-    height: 1px;
-    background: #fffefe;
-    width: 90%;
-    text-align: center;
-    margin: 1rem;
-}
 
 .projets{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
@@ -41,14 +28,17 @@
     align-items: center;
     border-radius: 0.5rem;
     border: 3px solid #ab9f9f;
+    background: #ab9f9f;
     height: 10rem; 
     padding: 0.25rem;
     font-size: 1rem;
-    color: #ffffff;
+    color: #000000;
     gap: 1rem;
+    flex: 1;
 }
 
 .projet p{
-font-size: 0.6rem;
+    font-size: 0.6rem;
+    color: #000000;
 }
 

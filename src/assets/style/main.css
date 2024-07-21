@@ -6,8 +6,9 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary-color: #0f0e17;
-  --bg-secondary-color: #1a1a2e;
+  /* --bg-primary-color: #0f0e17; */
+  --bg-primary-color: #16161a;
+  --bg-secondary-color: #242629;
 
 }
 

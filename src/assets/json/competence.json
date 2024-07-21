@@ -11,32 +11,40 @@
           "Réaliser des phases de tests",
           "Savoir utiliser et créer des API"
         ],
-        "projets":[
+        "niveaux": [
           {
-            "nom_projet":"12cm3",
-            "description":"C'est un jeu de course de rally en 2D (Java), on a la possibilite de jouer a des circuit creer par la communauté ou les developpeurs ",
-            "img":"logo12cm3.png"
+            "description": "Développer des applications informatiques simples.",
+            "bg_color":"#f2dcdb"
           },
           {
-            "nom_projet":"Liste de course",
-            "description":"C'est une liste de course avec des statistiques realisé en Symfony. On peux ajouter, modifier supprimer des courses. C'est un projet fait avec le framework Symfony ",
-            "img":"liste2course.png"
-          },{
-            "nom_projet":"Site web vente de Basket",
-            "description":"C'est un site web de vente, on va pouvoir commander des baskets et faire une paire de basket personnaliser",
-            "img":"site-basket.png"
-          },{
-            "nom_projet":"My Weather",
-            "description":"Une application android qui va pouvoir voir la meto d'une ville marquer sur google map",
-            "img":"myweather.png"
-          },{
-            "nom_projet":"Annuaire",
-            "description":"Uun annuaire en C qui va pouvoir ajouter, supprimer, modifier des clients en plus d'avoir un tri sur les noms et des filtres",
-            "img":"annuaire.png"
+            "description": "Partir des exigences et aller jusqu’à une application complète.",
+            "bg_color":"#ff9999"
+          },
+          {
+            "description": "Se spécialiser sur un ensemble de supports (embarqué, web, mobile, IOT...) avec un suivi qualitatif.",
+            "bg_color":"#c00000"
           }
         ],
+        "mon_niveau": 1,
         "recul_reflexif":"Je maitrise differents langages grace a mes diffrents projets comme la liste de course ou l'aplication mobile de meteo. De plus, grace au projet 12cm3 j'ai pu apprendre a faire une API.",
-        "bg_color":"#c00000"
+        "bg_color":"#c00000",
+        "bg_second_color":"#f2dcdb",
+        "projets": [
+          {
+            "nom": "Liste de course",
+            "description": "Application mobile permettant de gérer une liste de course",
+            "img": "liste2course.png"
+          },
+          {
+            "nom": "Application mobile de météo",
+            "description": "Application mobile permettant de consulter la météo",
+            "img": "myweather.png"
+          },
+          {
+            "nom": "12cm3",
+            "description": "Projet de fin de formation",
+            "img": "logo12cm3.png"
+          }]
       },
       {
         "nom_competence": "Optimisation des applications informatiques",
@@ -49,7 +57,23 @@
           "Anticiper les résultats d’un algo (temps d’exécution, espace mémoire, …)",
           "Optimiser des algos"
         ],
-        "bg_color":"#f79152"
+        "niveaux": [
+          {
+            "description": "Appréhender et construire des algorithmes.",
+            "bg_color":"#fdeada"
+          },
+          {
+            "description": "Sélectionner les algorithmes adéquats pour répondre à un problème donné.",
+            "bg_color":"#f8b589"
+          },
+          {
+            "description": "Analyser et optimiser des applications.",
+            "bg_color":"#f79153"
+          }
+        ],
+        "mon_niveau": 1,
+        "bg_color":"#f79152",
+        "bg_second_color":"#fdeada"
       },
       {
         "nom_competence": "Gérer des données de l’informations",
@@ -61,7 +85,19 @@
           "Assurer la confidentialité des données (intégrité et sécurité)",
           "Organiser la restitution de données à travers la programmation et la visualisation"
         ],
-        "bg_color":"#92d050"
+        "niveaux": [
+          {
+            "description": "Concevoir et mettre en place une base de données à partir d’un cahier des charges client.",
+            "bg_color":"#ebf1de"
+          },
+          {
+            "description": "Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité.",
+            "bg_color":"#b4de86"
+          }
+        ],
+        "mon_niveau": 1,
+        "bg_color":"#92d050",
+        "bg_second_color":"#ebf1de"
       },
       {
         "nom_competence": "Travailler dans une équipe informatique",
@@ -72,7 +108,23 @@
           "Utiliser des systèmes de gestion de code source pour organiser son travail",
           "Faire une veille technologique, être toujours informé sur l’actualité dans l’informatique"
         ],
-        "bg_color":"#1e1c11"
+        "niveaux": [
+          {
+            "description": "Identifier ses aptitudes pour travailler dans une équipe.",
+            "bg_color":"#dedac4"
+          },
+          {
+            "description": "Situer son rôle et ses missions au sein d’une équipe informatique.",
+            "bg_color":"#b1a777"
+          },
+          {
+            "description": "Manager une équipe informatique.",
+            "bg_color":"#fdefaa"
+          }
+        ],
+        "mon_niveau": 1,
+        "bg_color":"#1e1c11",
+        "bg_second_color":"#dedac4"
       },{
         "nom_competence":"Administrer des systèmes informatiques communicants complexes",
         "liste": [
@@ -86,7 +138,19 @@
         "Respecter les contraintes de performances / de coûts / d’efficacité",
         "Assurer la pérennité des données et du code"
         ],
-        "bg_color":"#ffc000"
+        "niveaux": [
+          {
+            "description": "Installer et configurer un poste de travail.",
+            "bg_color":"#fff2bd"
+          },
+          {
+            "description": "Déployer des services dans une architecture réseau.",
+            "bg_color":"#ffe169"
+          }
+        ],
+        "mon_niveau": 1,
+        "bg_color":"#ffc000",
+        "bg_second_color":"#fff2bd"
       },{
         "nom_competence" :"Conduire un projet",
         "liste": [
@@ -97,7 +161,19 @@
         "Gestion des risques et du temps (Identifier les risques potentiels tout au long du projet et prendre des mesures pour les minimiser)",
         "Évaluer les résultats et étudier les points qui pourraient être améliorés pour les prochains projet"
         ],
-        "bg_color":"#002060"
+        "niveaux": [
+          {
+            "description": "Identifier les besoins métiers des clients et des utilisateurs.",
+            "bg_color":"#d4e2f4"
+          },
+          {
+            "description": "Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs.",
+            "bg_color":"#8eb4e3"
+          }
+        ],
+        "mon_niveau": 0,
+        "bg_color":"#002060",
+        "bg_second_color":"#d4e2f4"
       }
     ]
   }
