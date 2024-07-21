@@ -50,7 +50,7 @@ export default {
       class="fixed md:absolute transform transition-transform duration-300 right-0 h-auto w-3/4 md:flex md:w-auto md:h-auto text-white z-50 ">
 
       <ul
-        class="flex flex-col items-center text-white font-bold text-2xl md:flex-row md:items-end mr-4 bg-gray-500 md:bg-[#0f0e17]">
+        class="flex flex-col items-center text-white font-bold text-2xl md:flex-row md:items-end mr-4 bg-gray-500 md:bg-[#16161a]">
         <li @click="isMenuOpenFalse" class="p-2">
           <RouterLink to="/">Accueil</RouterLink>
         </li>

@@ -3,12 +3,12 @@
         <h1 class="text-4xl md:text-6xl font-bold anim-entrance-text">Me Contacter</h1>
     </div>
 
-    <div class="m-4">
+    <div class="m-4 p-4 bg-[#242629] w-3/4 self-center">
         <div class="flex flex-col items-start text-white">
             <p>Pour me contacter, vous pouvez m'envoyer un email !</p>
             <p>Email : ray.tcontact@protonmail.com</p>
 
-            <h2 class="mt-4">Mes réseaux sociaux</h2>
+            <h2 class="mt-8 text-4xl">Mes Profils en Ligne</h2>
             <ul class="p-4">
                 <li>
                     <a href="https://www.linkedin.com/in/rayan-t-b91a74250/">
