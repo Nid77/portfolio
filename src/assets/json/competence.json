@@ -29,22 +29,7 @@
         "recul_reflexif":"Je maitrise differents langages grace a mes diffrents projets comme la liste de course ou l'aplication mobile de meteo. De plus, grace au projet 12cm3 j'ai pu apprendre a faire une API.",
         "bg_color":"#c00000",
         "bg_second_color":"#f2dcdb",
-        "projets": [
-          {
-            "nom": "Liste de course",
-            "description": "Application mobile permettant de gérer une liste de course",
-            "img": "liste2course.png"
-          },
-          {
-            "nom": "Application mobile de météo",
-            "description": "Application mobile permettant de consulter la météo",
-            "img": "myweather.png"
-          },
-          {
-            "nom": "12cm3",
-            "description": "Projet de fin de formation",
-            "img": "logo12cm3.png"
-          }]
+        "projets": ["liste 2 course","MyWeather","12cm3"]
       },
       {
         "nom_competence": "Optimisation des applications informatiques",
