@@ -4,36 +4,7 @@ import competenceData from '@/assets/json/competence.json'
 import technologiesData from '@/assets/json/technologies.json'
 import TechnologiesList from '@/components/TechnologiesList.vue'
 import '@/assets/style/competence.css'
-
-interface Competence {
-  nom_competence: string
-  liste: string[]
-  recul_reflexif: string
-  projets: Projet[]
-  bg_color: string
-  bg_second_color: string
-  niveaux: Niveau[]
-  mon_niveau: string
-}
-
-interface Niveau {
-  description: string
-  bg_color: string
-}
-
-interface Projet {
-  nom: string
-  img: string
-  description: string
-}
-
-interface Technology {
-  nom: string
-  lien: string
-  image: string
-  tags: string[]
-  projets: string[]
-}
+import { Competence, Technology } from '@/types/types'
 
 export default defineComponent({
   name: 'CompetenceList',

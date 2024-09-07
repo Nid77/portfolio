@@ -42,17 +42,17 @@ import '@/assets/style/acceuil.css'
         <h2 class="text-2xl font-extrabold text-white">Jeux-Vidéo</h2>
 
         <div class="projet-body">
-          <a href="https://nid77.itch.io/mind-connexion">
+          <a href="https://nid77.itch.io/mind-connexion" target="_blank">
             <img src="@/assets/img/projets/gmtk2021.png" alt="icon Mind Connexion" />
             <h3>GMTK2021 - Mind Connexion</h3>
           </a>
 
-          <a href="https://paperyka.itch.io/dicehead">
+          <a href="https://paperyka.itch.io/dicehead" target="_blank">
             <img src="@/assets/img/projets/dice-head.png" alt="icon dicehead" />
             <h3>GMTK2022 - Dicehead</h3>
           </a>
 
-          <a href="https://paperyka.itch.io/re-process">
+          <a href="https://paperyka.itch.io/re-process" target="_blank">
             <img src="@/assets/img/projets/re-process.png" alt="icon re-process" />
             <h3>GMTK2023 - Re-Process</h3>
           </a>
@@ -70,7 +70,7 @@ import '@/assets/style/acceuil.css'
 
           <a href="#">
             <img src="@/assets/img/projets/gestio.png" alt="image du projet" />
-            <h3>Gestionnaire des Taches sur Go</h3>
+            <h3>Gestio</h3>
           </a>
         </div>
       </section>
@@ -85,8 +85,8 @@ import '@/assets/style/acceuil.css'
           </a>
 
           <a href="#">
-            <img src="@/assets/img/projets-BUT/site-basket.png" alt="image du projet" />
-            <h3>Site web Basket</h3>
+            <img src="@/assets/img/projets-BUT/aide-descision.png" alt="image du projet" />
+            <h3>Aide descision</h3>
           </a>
 
           <a href="#">

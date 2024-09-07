@@ -11,14 +11,14 @@
         {
             "nom":"liste 2 course",
             "description":"C'est un site web de liste de course realisé avec le framework symfony",
-            "image":"liste2Course.png",
+            "image":"liste2course.png",
             "type":"BUTS3",
             "categorie":[], 
             "technologie":[]
         },{
             "nom":"MyWeather",
             "description":"Une application mobile qui permet de consulter la météo en temps réel avec google map realisé sous android studio",
-            "image":".png",
+            "image":"myweather.png",
             "type":"BUTS3",
             "categorie":[], 
             "technologie":[]
@@ -34,7 +34,7 @@
         {
             "nom":"logiciel d’aide à la décision",
             "description":" un logiciel d'aide décisionnelle pour la circulation entre des centres de santé realisé en JAVA",
-            "image":".png",
+            "image":"aide-descision.png",
             "type":"BUTS1",
             "categorie":[], 
             "technologie":[]
@@ -50,7 +50,7 @@
         {
             "nom":"Site web basket",
             "description":"Un site web de vente de basket ralisé en html,css",
-            "image":".png",
+            "image":"site-basket.png",
             "type":"BUTS1",
             "categorie":[], 
             "technologie":[]
@@ -58,7 +58,7 @@
         {
             "nom":"Mind Connexion",
             "description":"Un jeu d'enigme dans lequel le joueur doit avancer avec deux personnages qui ont des deplacements differentes, le jeu est realisé avec unity",
-            "image":".png",
+            "image":"gmtk2021.png",
             "type":"GMTK2021",
             "categorie":[], 
             "technologie":[]
@@ -66,7 +66,7 @@
         {
             "nom":"Dicehead",
             "description":"un jeu de platforme dans lequel pour avancer il faut lancer le personnage principal pour obtenir des capacités",
-            "image":".png",
+            "image":"dice-head.png",
             "type":"GMTK2022",
             "categorie":[], 
             "technologie":[]
@@ -74,7 +74,7 @@
         {
             "nom":"Re-Process",
             "description":"Un jeu de plateforme dans lequel le controleru est inverse, on doit manipuler l'environnment afin que les heros puissent avancer dans l'aventure",
-            "image":".png",
+            "image":"re-process.png",
             "type":"GMTK2023",
             "categorie":[], 
             "technologie":[]
@@ -82,7 +82,7 @@
         {
             "nom":"Sonic Colors 2D Ultimate",
             "description":"C'est un remake d'un jeu sonic en 2D realisé avec unity",
-            "image":".png",
+            "image":"soniccolors2d.png",
             "type":"PERSO",
             "categorie":[], 
             "technologie":[]
@@ -90,7 +90,7 @@
         {
             "nom":"Gestio",
             "description":"Une application en ligne de commande pour la gestion des taches avec les ficher JSON realisé en Go",
-            "image":".png",
+            "image":"gestio.png",
             "type":"PERSO",
             "categorie":[],
             "technologie":[]

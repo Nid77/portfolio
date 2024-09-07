@@ -128,17 +128,17 @@
       "projets": ["Projet3", "Projet4"]
     },
     {
-      "nom": "Trello",
-      "image": "https://cdn.worldvectorlogo.com/logos/trello.svg",
-      "lien": "https://trello.com/",
-      "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
-      "projets": ["Projet5", "Projet6"]
-    },{
       "nom": "Azure DevOps",
-      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg",
       "lien": "https://azure.microsoft.com/fr-fr/services/devops/",
       "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
       "projets": ["Projet7", "Projet8"]
+    },{
+      "nom":"Azure",
+      "image":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
+      "lien":"https://azure.microsoft.com/fr-fr/",
+      "tags":["cloud","IaaS","PaaS","SaaS"],
+      "projets":["Projet9","Projet10"]
     }
   ],
   "IDE": [
@@ -195,6 +195,38 @@
       "lien": "https://visualstudio.microsoft.com/fr/",
       "tags": ["IDE", "C#", "ASP.NET", "Azure"],
       "projets": ["Projet1", "Projet2"]
+    }
+  ],
+  "Bases de Données":[
+    {
+      "nom": "SQL",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+      "lien": "https://fr.wikipedia.org/wiki/Structured_Query_Language",
+      "tags": ["langage de requête", "gestion de données", "relationnel"],
+      "projets": ["Projet1", "Projet2"]
+    },
+    {
+      "nom": "MongoDB",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "lien": "https://www.mongodb.com/",
+      "tags": ["base de données", "NoSQL", "document"],
+      "projets": ["Projet3", "Projet4"]
+    }
+  ],
+  "Platformes et Outils Professionnels":[
+    {
+      "nom": "Trello",
+      "image": "https://cdn.worldvectorlogo.com/logos/trello.svg",
+      "lien": "https://trello.com/",
+      "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
+      "projets": ["Projet5", "Projet6"]
+    },
+    {
+      "nom":"Salesforce",
+      "image":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/salesforce/salesforce-original.svg",
+      "lien":"https://www.salesforce.com/fr/",
+      "tags":["CRM","gestion de la relation client","cloud"],
+      "projets":["Projet1","Projet2"]
     }
   ]
 }

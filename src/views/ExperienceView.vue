@@ -5,24 +5,8 @@ import 'flowbite';
 import experienceData from '@/assets/json/experiences.json';
 import Modal from '@/components/ModalView.vue';
 // import dayjs from 'dayjs'; // package a supprimer (pas utilisé)
+import { type Experience, ExpCompetence } from '@/types/types';
 
-interface Experience {
-  type: string
-  poste: string
-  entreprise: string
-  dateDebut: string
-  dateFin: string
-  description: string
-  retour: string
-  logo_entreprise: string
-  bg_color: string
-  competences: Competence[]
-}
-
-interface Competence {
-  competence: string
-  explication: string
-}
 
 export default defineComponent({
   name: 'ExperienceList',
