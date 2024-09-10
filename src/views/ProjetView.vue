@@ -67,19 +67,14 @@ function getImage(img: string, type: string) {
 
         </div> -->
 
-        <div class="flex flex-col m-4 gap-4 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
             <div v-for="(pro, index) in projets"
-                class=" bg-[#242629] md:h-80 p-4 md:items-center text-white flex flex-col md:flex-row gap-4 md:gap-2  "
+                class=" bg-[#242629] h-100 p-4 rounded flex flex-col items-center justify-center"
                 :key="index">
-
-                <div class="md:w-1/3 flex items-center justify-center p-4">
-                    <img class="max-h-80 max-w-full" :src="getImage(pro.image, pro.type)" alt="logo du projet" />
-                </div>
-                <div class="md:w-2/3 h-full flex flex-col text-left md:border-l-4 border-white-500 ">
-                    <h3 class="">NOM : {{pro.nom }} </h3>
-                    <h3 class="">TYPE : {{ pro.type }} </h3>
-                    
-                </div>
+                <img class=" max-h-80 object-fill" :src="getImage(pro.image, pro.type)" alt="logo du projet" />
+                <h2>
+                    {{ pro.nom }}
+                </h2>
 
             </div>
         </div>
@@ -88,10 +83,7 @@ function getImage(img: string, type: string) {
 
 
 <style>
-.img-projet {
-    height: auto;
-    object-fit: cover;
-}
+
 
 </style>
 
