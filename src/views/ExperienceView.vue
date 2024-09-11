@@ -5,7 +5,7 @@ import 'flowbite';
 import experienceData from '@/assets/json/experiences.json';
 import Modal from '@/components/ModalView.vue';
 // import dayjs from 'dayjs'; // package a supprimer (pas utilisé)
-import { type Experience, ExpCompetence } from '@/types/types';
+import { type Experience, type ExpCompetence } from '@/types/types';
 
 
 export default defineComponent({

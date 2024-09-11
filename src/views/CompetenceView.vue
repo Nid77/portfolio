@@ -4,7 +4,7 @@ import competenceData from '@/assets/json/competence.json'
 import technologiesData from '@/assets/json/technologies.json'
 import TechnologiesList from '@/components/TechnologiesList.vue'
 import '@/assets/style/competence.css'
-import { Competence, Technology } from '@/types/types'
+import { type Competence, type Technology } from '@/types/types'
 
 export default defineComponent({
   name: 'CompetenceList',
