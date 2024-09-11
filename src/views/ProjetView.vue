@@ -1,19 +1,18 @@
 <script lang="ts" setup>
 import '@/assets/style/projet.css'
 
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 import projetsData from '@/assets/json/projets.json'
 import { type Projet } from '@/types/types'
-import { initializeObserver } from '@/animation.ts'
 
 const isFilterMenuOpen = ref(false)
 const projets = ref<Projet[]>([])
+const researchValue = ref<string>("")
 
 
 onMounted(() => {
     projets.value = (projetsData as any).projets
-    initializeObserver()
 })
 
 const toggleFilterMenu = () => {
@@ -29,6 +28,12 @@ function getImage(img: string, type: string) {
     return new URL(`../assets/img/${uri}/${img}`, import.meta.url).href
 }
 
+const filterProjet = computed(() => {
+    return projets.value.filter(projet => {
+        return projet.nom.toLowerCase().includes(researchValue.value.toLowerCase())
+    })
+})
+
 </script>
 
 
@@ -37,19 +42,12 @@ function getImage(img: string, type: string) {
         <h1 class="text-4xl md:text-6xl font-bold anim-entrance-text">Mes Projets</h1>
     </div>
 
-    <div class="flex flex-col">
-        <!-- <div class="flex w-3/4 self-center ">
+    <div class="flex w-3/4 self-center ">
             <input type="text"
                 class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-                placeholder="Search..." />
-            <button type="submit"
-                class="inset-y-0 right-0 flex items-center px-4 text-white bg-blue-500 border border-transparent rounded-r-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M21 21l-4.35-4.35m1.1-5.4a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z" />
-                </svg>
-            </button>
+                placeholder="Search..." 
+                v-model="researchValue"
+                />
             <button @click="toggleFilterMenu"
                 class="flex items-center px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24"
@@ -65,10 +63,11 @@ function getImage(img: string, type: string) {
                 class="absolute right-0 w-48 mt-2 bg-white border border-gray-300 rounded-md shadow-lg">
             </div>
 
-        </div> -->
+        </div>
 
+    <div class="flex flex-col">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
-            <div v-for="(projet, index) in projets"
+            <div v-for="(projet, index) in filterProjet"
                 class=" bg-[#242629] h-100 p-4 rounded flex flex-col items-center justify-center"
                 :key="index">
                 <img class=" max-h-80 object-fill" :src="getImage(projet.image, projet.type)" alt="logo du projet" />
