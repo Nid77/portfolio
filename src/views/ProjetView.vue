@@ -68,12 +68,12 @@ function getImage(img: string, type: string) {
         </div> -->
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 text-white">
-            <div v-for="(pro, index) in projets"
+            <div v-for="(projet, index) in projets"
                 class=" bg-[#242629] h-100 p-4 rounded flex flex-col items-center justify-center"
                 :key="index">
-                <img class=" max-h-80 object-fill" :src="getImage(pro.image, pro.type)" alt="logo du projet" />
+                <img class=" max-h-80 object-fill" :src="getImage(projet.image, projet.type)" alt="logo du projet" />
                 <h2>
-                    {{ pro.nom }}
+                    {{ projet.nom }}
                 </h2>
 
             </div>
