@@ -1,17 +1,20 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue","src/**/*.json"],
-  "exclude": ["src/**/__tests__/*"],
+  "extends": "@vue/tsconfig/tsconfig.dom.json", // Extends la configuration TS spécifique à Vue
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.json"], // Inclut les fichiers TS, Vue et JSON
+  "exclude": ["src/**/__tests__/*"], // Exclut les fichiers de tests
   "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "baseUrl": ".",
+    "composite": true, // Utile pour les builds incrémentaux
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // Fichier temporaire pour les infos de build
+    "resolveJsonModule": true, // Permet d'importer des fichiers JSON
+    "esModuleInterop": true, // Permet une meilleure interopérabilité avec les modules CommonJS
+    "baseUrl": ".", // Définit la racine du projet
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"] // Alias '@' pointant vers le répertoire 'src'
     },
-    "types": ["node"],
-    "target": "es6",
+    "types": ["node"], // Ajoute les types Node.js
+    "target": "es6", // Cible ES6 pour la compatibilité
+    "module": "esnext", // Module compatible pour `import.meta`
+    "moduleResolution": "node", // Utilisation de la résolution de modules Node.js
+    "strict": true // Activer les vérifications strictes de TypeScript
   }
 }
