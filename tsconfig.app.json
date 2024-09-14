@@ -9,7 +9,7 @@
     "esModuleInterop": true, // Permet une meilleure interopérabilité avec les modules CommonJS
     "baseUrl": ".", // Définit la racine du projet
     "paths": {
-      "@/*": ["./src/*"] // Alias '@' pointant vers le répertoire 'src'
+      "@/*": ["src/*"] // Alias '@' pointant vers le répertoire 'src'
     },
     "types": ["node"], // Ajoute les types Node.js
     "target": "es6", // Cible ES6 pour la compatibilité

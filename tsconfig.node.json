@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
+  "extends": "@tsconfig/node20/tsconfig.json", // Node 20 utilise ECMAScript Modules (ESM) par défaut
   "include": [
     "vite.config.ts",
     "vitest.config.*",
@@ -7,17 +7,23 @@
     "nightwatch.conf.*",
     "playwright.config.*",
     "src/**/*.ts*",
+    "env.d.ts"
   ],
   "exclude": ["node_modules", "dist", "lib"],
   "compilerOptions": {
-    "lib": ["dom", "es2015"],
+    "lib": ["dom", "es2015"], // ES2015 (ES6) inclut des fonctionnalités modernes
     "outDir": "./lib/cjs/",
     "sourceMap": true,
     "declaration": true,
     "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es5",
+    "resolveJsonModule": true,
+    "module": "esnext", // Passer à un module compatible avec import.meta
+    "target": "es2020", // ES2020 prend en charge import.meta
     "allowJs": true,
-    "moduleResolution": "node"
-}
+    "moduleResolution": "node",
+    "baseUrl": ".", // Définit la racine du projet
+    "paths": {
+      "@/*": ["src/*"] // Alias '@' pointant vers le répertoire 'src'
+    },
+  }
 }
