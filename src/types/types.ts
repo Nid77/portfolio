@@ -1,4 +1,3 @@
-
 export interface Competence {
   nom_competence: string
   liste: string[]
@@ -21,6 +20,8 @@ export interface Projet {
   description: string
   type: string
   lien: string
+  categorie: string[]
+  technologies: string[]
 }
 
 export interface Technology {

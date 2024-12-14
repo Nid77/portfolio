@@ -2,11 +2,29 @@
     <div v-if="projet">
         <h1>{{ projet.nom }}</h1>
 
-        <div class="flex justify-center">
-            <a :href="projet.lien">
-                <img :src="getImage(projet.image)" :alt="projet.nom" />
-                <h3>{{ projet.nom }}</h3>
-            </a>
+        <div class="flex flex-col aligns-center justify-center">
+
+            <h2 class="text-bold text-white">{{ projet.nom }}</h2>
+            <div class="p-4 self-center">
+                <img class="max-h-96" :src="getImage(projet.image)" :alt="projet.nom" />
+            </div>
+
+            <p>DESCRIPTION : {{ projet.description }}</p>
+            <p>TYPE : {{ projet.type }}</p>
+
+            <div>
+                <p>CATEGORIES :</p>
+                <div v-for="cat in projet.categorie">
+                    <p>{{ cat }}</p>
+                </div>
+            </div>
+
+            <div>
+                <p>TECHNOLOGIES :</p>
+                <div v-for="tech in projet.technologies">
+                    <p>{{ tech }}</p>
+                </div>
+            </div>
 
         </div>
     </div>
