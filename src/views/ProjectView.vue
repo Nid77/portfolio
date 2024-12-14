@@ -4,7 +4,6 @@
 
         <div class="flex flex-col aligns-center justify-center">
 
-            <h2 class="text-bold text-white">{{ projet.nom }}</h2>
             <div class="p-4 self-center">
                 <img class="max-h-96" :src="getImage(projet.image)" :alt="projet.nom" />
             </div>
