@@ -52,19 +52,19 @@ export default {
       <ul
         class="flex flex-col items-center text-white font-bold text-2xl md:flex-row md:items-end mr-4 bg-gray-500 md:bg-[#16161a]">
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink to="/">Accueil</RouterLink>
+          <RouterLink :to='{ name: "home" }'>Accueil</RouterLink>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink to="/projets">Projets</RouterLink>
+          <RouterLink :to='{ name: "projets" }'>Projets</RouterLink>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink to="/competences">Compétences</RouterLink>
+          <RouterLink :to='{ name: "competences" }'>Compétences</RouterLink>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink to="/experiences">Experiences</RouterLink>
+          <RouterLink :to='{ name: "experiences" }'>Experiences</RouterLink>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink to="/contact">Contact</RouterLink>
+          <RouterLink :to='{ name: "contact" }'>Contact</RouterLink>
         </li>
 
       </ul>

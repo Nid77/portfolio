@@ -5,7 +5,8 @@ import InConstructView from '../components/InConstructView.vue'
 import ExperienceView from '../views/ExperienceView.vue'
 import ErrorView from '../components/ErrorView.vue'
 import ContactView from '../views/ContactView.vue'
-import ProjetView from '../views/ProjetView.vue'
+import ProjectListView from '../views/ProjectListView.vue'
+import ProjectView from '../views/ProjectView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,14 +17,14 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/competences',
+      path: '/skills',
       name: 'competences',
       component: CompetenceView
     },
     {
-      path: '/projets',
+      path: '/projects',
       name: 'projets',
-      component: ProjetView
+      component: ProjectListView 
     },
     {
       path: '/experiences',
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView
+    },
+    {
+      path: '/project/:id',
+      name: 'project',
+      component: ProjectView
     },
     {
       path: '/:pathMatch(.*)*',

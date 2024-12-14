@@ -20,6 +20,7 @@ export interface Projet {
   image: string
   description: string
   type: string
+  lien: string
 }
 
 export interface Technology {
