@@ -3,7 +3,7 @@ import '@/assets/style/projet.css'
 
 import { computed, onMounted, ref } from 'vue'
 
-import projetsData from '@/assets/json/projets.json'
+import { getProjects } from '@/services/projects';
 import { type Projet } from '@/types/types'
 
 const isFilterMenuOpen = ref(false)
@@ -12,7 +12,7 @@ const researchValue = ref<string>("")
 
 
 onMounted(() => {
-    projets.value = (projetsData as any).projets
+    projets.value = getProjects()
 })
 
 const toggleFilterMenu = () => {

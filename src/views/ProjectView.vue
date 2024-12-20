@@ -36,7 +36,7 @@
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { type Projet } from '@/types/types';
-import projetsData from '@/assets/json/projets.json'
+import { getProjectByName } from '@/services/projects';
 
 export default defineComponent({
     name: 'Project',
@@ -44,11 +44,8 @@ export default defineComponent({
         const route = useRoute();
         const projectName = route.params.id;
         const projet = ref<Projet | null>(null);
-        try {
-            projet.value = (projetsData as any).projets.find((projet: Projet) => projet.nom === projectName);
-        } catch (error) {
-            console.error(error);
-        }
+
+        projet.value = getProjectByName(projectName as string) as Projet;
 
         function getImage(img: string) {
             if (projet.value?.type)

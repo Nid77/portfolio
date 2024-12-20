@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import '@/assets/style/acceuil.css'
+import { defineComponent } from 'vue';
+import ProjectPresentation from '@/components/ProjectPresentation.vue';
+
+defineComponent({
+  name: 'HomeView',
+  components: {
+    ProjectPresentation
+  },
+
+})
+
 </script>
 
 <template>
@@ -38,63 +49,7 @@ import '@/assets/style/acceuil.css'
     <section id="projet" class="projets flex flex-col items-center text-center">
       <h1 class="text-5xl font-extrabold text-white text-center">Quelques projets</h1>
 
-      <section class="anim-fade-in">
-        <h2 class="text-2xl font-extrabold text-white">Jeux-Vidéo</h2>
-
-        <div class="projet-body">
-          <a href="https://nid77.itch.io/mind-connexion" target="_blank">
-            <img src="@/assets/img/projets/gmtk2021.png" alt="icon Mind Connexion" />
-            <h3>GMTK2021 - Mind Connexion</h3>
-          </a>
-
-          <a href="https://paperyka.itch.io/dicehead" target="_blank">
-            <img src="@/assets/img/projets/dice-head.png" alt="icon dicehead" />
-            <h3>GMTK2022 - Dicehead</h3>
-          </a>
-
-          <a href="https://paperyka.itch.io/re-process" target="_blank">
-            <img src="@/assets/img/projets/re-process.png" alt="icon re-process" />
-            <h3>GMTK2023 - Re-Process</h3>
-          </a>
-        </div>
-      </section>
-
-      <section class="anim-fade-in">
-        <h2 class="text-2xl font-extrabold text-white">Personnel</h2>
-
-        <div class="projet-body">
-          <a href="#">
-            <img src="@/assets/img/projets/soniccolors2d.png" alt="image du projet" />
-            <h3>Sonic Colors 2D Ultimate</h3>
-          </a>
-
-          <a href="#">
-            <img src="@/assets/img/projets/gestio.png" alt="image du projet" />
-            <h3>Gestio</h3>
-          </a>
-        </div>
-      </section>
-
-      <section class="anim-fade-in">
-        <h2 class="text-2xl font-extrabold text-white">Scolaire</h2>
-
-        <div class="projet-body">
-          <a href="#">
-            <img src="@/assets/img/projets-BUT/logo12cm3.png" alt="image du projet" />
-            <h3>12cm3</h3>
-          </a>
-
-          <a href="#">
-            <img src="@/assets/img/projets-BUT/aide-descision.png" alt="image du projet" />
-            <h3>Aide descision</h3>
-          </a>
-
-          <a href="#">
-            <img src="@/assets/img/projets-BUT/myweather.png" alt="image du projet" />
-            <h3>MyWeather</h3>
-          </a>
-        </div>
-      </section>
+      <ProjectPresentation :projets="['test']" />
     </section>
 
 
