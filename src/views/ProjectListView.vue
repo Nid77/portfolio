@@ -5,29 +5,49 @@ import { computed, onMounted, ref } from 'vue'
 
 import { getProjects } from '@/services/projects';
 import { type Projet } from '@/types/types'
+import Combobox from '@/components/Combobox.vue'
 
 const isFilterMenuOpen = ref(false)
 const projets = ref<Projet[]>([])
 const researchValue = ref<string>("")
+const filterValue = ref<string>("")
 
 
 onMounted(() => {
     projets.value = getProjects()
 })
 
-const toggleFilterMenu = () => {
-    //isFilterMenuOpen.value = !isFilterMenuOpen.value
-}
 
 function getImage(img: string, type: string) {
     return new URL(`../assets/img/${type.includes('BUT') ? "projets-BUT" : "projets"}/${img}`, import.meta.url).href
 }
 
 const filterProjet = computed(() => {
+    if (researchValue.value === "" && filterValue.value === "") {
+        return projets.value
+    }
+
+    if (researchValue.value === "") {
+        return projets.value.filter(projet => {
+            return projet.type.toLowerCase().includes(filterValue.value.toLowerCase())
+        })
+    }
+
+    if (filterValue.value === "") {
+        return projets.value.filter(projet => {
+            return projet.nom.toLowerCase().includes(researchValue.value.toLowerCase())
+        })
+    }
+
     return projets.value.filter(projet => {
-        return projet.nom.toLowerCase().includes(researchValue.value.toLowerCase())
+        return projet.nom.toLowerCase().includes(researchValue.value.toLowerCase()) && projet.type.toLowerCase().includes(filterValue.value.toLowerCase())
     })
 })
+
+
+function setFilterValue(value: string) {
+    filterValue.value = value
+}
 
 </script>
 
@@ -37,10 +57,14 @@ const filterProjet = computed(() => {
         <h1 class="text-4xl md:text-6xl font-bold anim-entrance-text">Mes Projets</h1>
     </div>
 
-    <div class="flex w-3/4 self-center ">
+    <div class="flex w-3/4 self-center gap-2 ">
         <input type="text"
             class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             placeholder="Search..." v-model="researchValue" />
+
+
+        <Combobox :options="['BUT', 'PERSO']" @update-options="setFilterValue($event)" />
+
     </div>
 
     <div class="flex flex-col">
