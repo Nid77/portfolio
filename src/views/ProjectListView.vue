@@ -6,11 +6,12 @@ import { computed, onMounted, ref } from 'vue'
 import { getProjects } from '@/services/projects';
 import { type Projet } from '@/types/types'
 import Combobox from '@/components/Combobox.vue'
+import { it } from 'node:test';
 
 const isFilterMenuOpen = ref(false)
 const projets = ref<Projet[]>([])
 const researchValue = ref<string>("")
-const filterValue = ref<string>("")
+const filterValue = ref<Array<String>>([])
 
 
 onMounted(() => {
@@ -23,29 +24,19 @@ function getImage(img: string, type: string) {
 }
 
 const filterProjet = computed(() => {
-    if (researchValue.value === "" && filterValue.value === "") {
+    if (researchValue.value === "" && filterValue.value.length === 0) {
         return projets.value
     }
-
-    if (researchValue.value === "") {
-        return projets.value.filter(projet => {
-            return projet.type.toLowerCase().includes(filterValue.value.toLowerCase())
-        })
-    }
-
-    if (filterValue.value === "") {
-        return projets.value.filter(projet => {
-            return projet.nom.toLowerCase().includes(researchValue.value.toLowerCase())
-        })
-    }
-
+    console.log("value filtre :",filterValue.value)
     return projets.value.filter(projet => {
-        return projet.nom.toLowerCase().includes(researchValue.value.toLowerCase()) && projet.type.toLowerCase().includes(filterValue.value.toLowerCase())
-    })
+        return filterValue.value.length > 0 ? filterValue.value.some((item) => item.includes(projet.type.toUpperCase())) : false ||
+            researchValue.value !== "" ? projet.nom.toLowerCase().includes(researchValue.value.toLowerCase()) : false
+    });
+
 })
 
 
-function setFilterValue(value: string) {
+function setFilterValue(value: string[]) {
     filterValue.value = value
 }
 
@@ -58,12 +49,17 @@ function setFilterValue(value: string) {
     </div>
 
     <div class="flex w-3/4 self-center gap-2 ">
-        <input type="text"
-            class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-            placeholder="Search..." v-model="researchValue" />
+        <div class="w-full ">
+            <input type="text"
+                class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                placeholder="Search..." v-model="researchValue" />
+            <div>
+                <p v-for="filter in filterValue">{{ filter }}</p>
+            </div>
+        </div>
 
-
-        <Combobox :options="['BUT', 'PERSO']" @update-options="setFilterValue($event)" />
+        e
+        <Combobox :options="['BUT', 'PERSO']" @update-options="setFilterValue($event.value)" />
 
     </div>
 
