@@ -58,7 +58,6 @@ function setFilterValue(value: string[]) {
             </div>
         </div>
 
-        e
         <Combobox :options="['BUT', 'PERSO']" @update-options="setFilterValue($event.value)" />
 
     </div>

@@ -46,10 +46,10 @@ defineComponent({
       </div>
     </section>
 
-    <section id="projet" class="projets flex flex-col items-center text-center">
+    <section id="projet" class="flex flex-col items-center text-center">
       <h1 class="text-5xl font-extrabold text-white text-center">Quelques projets</h1>
 
-      <ProjectPresentation :projets="['test']" />
+      <ProjectPresentation :projets="['Mind Connexion', 'Dicehead', 'Re-Process']" />
     </section>
 
 
