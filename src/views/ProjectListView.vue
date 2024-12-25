@@ -2,16 +2,17 @@
 import '@/assets/style/projet.css'
 
 import { computed, onMounted, ref } from 'vue'
-
 import { getProjects } from '@/services/projects';
 import { type Projet } from '@/types/types'
 import Combobox from '@/components/Combobox.vue'
-import { it } from 'node:test';
+import Cross from '@/assets/svg/cross.svg'
+
 
 const isFilterMenuOpen = ref(false)
 const projets = ref<Projet[]>([])
 const researchValue = ref<string>("")
 const filterValue = ref<Array<String>>([])
+const options = ['BUT', 'PERSO']
 
 
 onMounted(() => {
@@ -27,18 +28,28 @@ const filterProjet = computed(() => {
     if (researchValue.value === "" && filterValue.value.length === 0) {
         return projets.value
     }
-    console.log("value filtre :",filterValue.value)
+    console.log("value filtre :", filterValue.value)
     return projets.value.filter(projet => {
-        return filterValue.value.length > 0 ? filterValue.value.some((item) => item.includes(projet.type.toUpperCase())) : false ||
+        return filterValue.value.length > 0 ? filterValue.value.some(item => projet.type.toUpperCase().includes(item.toString())) : false ||
             researchValue.value !== "" ? projet.nom.toLowerCase().includes(researchValue.value.toLowerCase()) : false
     });
 
 })
 
 
-function setFilterValue(value: string[]) {
-    filterValue.value = value
+function setFilterValue(newValue: string) {
+    filterValue.value.push(newValue)
 }
+
+function OnDeleteFilter(value: string) {
+    filterValue.value = filterValue.value.filter((item) => item !== value)
+}
+
+const filterOptions = computed(() => {
+    return options.filter((option) => {
+        return !filterValue.value.includes(option)
+    })
+})
 
 </script>
 
@@ -53,12 +64,15 @@ function setFilterValue(value: string[]) {
             <input type="text"
                 class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 placeholder="Search..." v-model="researchValue" />
-            <div>
-                <p v-for="filter in filterValue">{{ filter }}</p>
+            <div class="flex mt-4">
+                <div v-for="filter in filterValue" class="flex gap-4 p-2 border border-gray-300 rounded-md">
+                    <p>{{ filter }}</p>
+                    <button @click="OnDeleteFilter(filter as string)"><Cross/></button>
+                </div>
             </div>
         </div>
 
-        <Combobox :options="['BUT', 'PERSO']" @update-options="setFilterValue($event.value)" />
+        <Combobox :options="filterOptions" @update-options="setFilterValue($event.value)" />
 
     </div>
 

@@ -22,10 +22,6 @@ export default defineComponent({
         options: {
             type: Array<String>,
             required: true
-        },
-        value: {
-            type: String,
-            required: false
         }
     },
     emits: ['updateOptions'],
@@ -33,31 +29,26 @@ export default defineComponent({
 
         const isOpen = ref(false)
         const resarchValue = ref<string>("")
-        const selectedOption = ref<Array<String>>([])
+        const selectedOption = ref<String>("")
 
         function selectOption(option: string) {
-            selectedOption.value.push(option)
+            selectedOption.value = option
             isOpen.value = false
             ctx.emit('updateOptions', selectedOption)
         }
 
-        const filterOption = computed(() => {
-            if(resarchValue.value === "") return props.options
+        const filterOptions = computed(() => {
+            if (resarchValue.value === "") return props.options
             return props.options.filter((option) => {
                 return option.toLocaleLowerCase().includes(resarchValue.value.toLocaleLowerCase())
             })
         })
 
-        function deleteOptions(option: string) {
-            selectedOption.value = selectedOption.value.filter(o => o !== option)
-        }
-
         return {
             isOpen,
             selectedOption,
             selectOption,
-            deleteOptions,
-            options: filterOption,
+            options: filterOptions,
             resarchValue
         }
     },
