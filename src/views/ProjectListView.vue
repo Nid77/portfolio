@@ -28,10 +28,10 @@ const filterProjet = computed(() => {
     if (researchValue.value === "" && filterValue.value.length === 0) {
         return projets.value
     }
-    console.log("value filtre :", filterValue.value)
     return projets.value.filter(projet => {
-        return filterValue.value.length > 0 ? filterValue.value.some(item => projet.type.toUpperCase().includes(item.toString())) : false ||
-            researchValue.value !== "" ? projet.nom.toLowerCase().includes(researchValue.value.toLowerCase()) : false
+        let filterBool = filterValue.value.length > 0 ? filterValue.value.some(item => projet.type.toUpperCase().includes(item.toString())) : true
+        let researchBool = researchValue.value !== "" ? projet.nom.toLowerCase().includes(researchValue.value.toLowerCase()) : true
+        return filterBool && researchBool
     });
 
 })
@@ -67,7 +67,9 @@ const filterOptions = computed(() => {
             <div class="flex mt-4">
                 <div v-for="filter in filterValue" class="flex gap-4 p-2 border border-gray-300 rounded-md">
                     <p>{{ filter }}</p>
-                    <button @click="OnDeleteFilter(filter as string)"><Cross/></button>
+                    <button @click="OnDeleteFilter(filter as string)">
+                        <Cross />
+                    </button>
                 </div>
             </div>
         </div>
