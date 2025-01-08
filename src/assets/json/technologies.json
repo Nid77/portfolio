@@ -134,6 +134,13 @@
       "lien": "https://spring.io/projects/spring-boot",
       "tags": ["framework Java", "back-end", "Spring"],
       "projets": ["Projet11", "Projet12"]
+    },
+    {
+      "nom": "Express.js",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+      "lien": "https://expressjs.com/",
+      "tags": ["framework Node.js", "back-end", "minimaliste"],
+      "projets": ["Projet13", "Projet14"]
     }
   ],
   "Services": [
@@ -165,13 +172,6 @@
       "lien": "https://azure.microsoft.com/fr-fr/services/devops/",
       "tags": ["gestion de projet", "collaboration", "suivi des tâches"],
       "projets": ["Projet7", "Projet8"]
-    },
-    {
-      "nom": "Azure",
-      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg",
-      "lien": "https://azure.microsoft.com/fr-fr/",
-      "tags": ["cloud", "IaaS", "PaaS", "SaaS"],
-      "projets": ["Projet9", "Projet10"]
     }
   ],
   "IDE": [
@@ -239,9 +239,23 @@
       "lien": "https://www.mongodb.com/",
       "tags": ["base de données", "NoSQL", "document"],
       "projets": ["Projet3", "Projet4"]
+    },
+    {
+      "nom": "MySQL",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+      "lien": "https://www.mysql.com/fr/",
+      "tags": ["base de données", "relationnel", "open-source"],
+      "projets": ["Projet5", "Projet6"]
+    },
+    {
+      "nom": "Cosmos DB",
+      "image": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cosmosdb/cosmosdb-original.svg",
+      "lien": "https://azure.microsoft.com/fr-fr/services/cosmos-db/",
+      "tags": ["base de données", "NoSQL", "multi-modèle"],
+      "projets": ["Projet7", "Projet8"]
     }
   ],
-  "Platformes et Outils Professionnels": [
+  "Plateformes Pro": [
     {
       "nom": "Trello",
       "image": "https://cdn.worldvectorlogo.com/logos/trello.svg",

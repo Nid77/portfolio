@@ -9,12 +9,13 @@
         </ul>
         <hr class="h-2 w-full mb-2" />
         <div>
-            <div class="langages grid grid-cols-2 md:grid-cols-6 gap-4">
-                <div v-for="techno in paginatedTechnologies" :key="techno.nom"
-                    class="bg-[#242629] flex flex-col text-center items-center justify-center text-2x1 p-4 rounded-lg">
-                    <a :href="techno.lien">
-                        <img :src="techno.image" class="h-24 w-24 mb-4" />
-                        <h3>{{ techno.nom }}</h3>
+            <div class="langages grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
+                <div v-for="index in itemsPerPage" :key="index"
+                    class="bg-[#242629] flex flex-col text-center items-center justify-center text-2x1 p-4 rounded-lg h-40">
+                    <a v-if="paginatedTechnologies[index-1]" :href="paginatedTechnologies[index-1].lien"
+                     class="flex flex-col items-center">
+                        <img :src="paginatedTechnologies[index-1].image" class="h-24 w-24 mb-4 self-center" />
+                        <h3>{{ paginatedTechnologies[index-1].nom }}</h3>
                     </a>
                 </div>
             </div>
@@ -78,7 +79,7 @@ export default defineComponent({
                 currentPage.value--;
             }
         };
-        return { activeTab, activateTab, paginatedTechnologies, nextPage, prevPage, currentPage, totalPages };
+        return { activeTab, activateTab, paginatedTechnologies, nextPage, prevPage, currentPage, totalPages, itemsPerPage };
     },
 });
 </script>

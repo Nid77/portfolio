@@ -48,9 +48,11 @@ defineComponent({
 
     <section id="projet" class="flex flex-col items-center text-center">
       <h1 class="text-5xl font-extrabold text-white text-center">Quelques projets</h1>
-
       <ProjectPresentation :projets="['Mind Connexion', 'Dicehead', 'Re-Process']" />
+      <ProjectPresentation :projets="['12cm3', 'logiciel d’aide à la décision', 'MyWeather']" />
+      <ProjectPresentation :projets="['Gestio', 'Sonic Colors 2D Ultimate']" />
     </section>
+    
 
 
   </div>
