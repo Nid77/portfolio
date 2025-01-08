@@ -20,7 +20,7 @@ export interface Projet {
   description: string
   type: string
   lien: string
-  categorie: string[]
+  categories: string[]
   technologies: string[]
 }
 

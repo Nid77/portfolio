@@ -12,7 +12,6 @@ export function getProjects(): Projet[] {
 
 export function getProjectByName(name: string): Projet | null {
   try {
-    console.log('PROJET DATA : ' + JSON.stringify(projetsData))
     return (projetsData as any).projets.find((project: Projet) => project.nom === name) as Projet
   } catch (error) {
     console.error(error)
