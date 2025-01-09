@@ -26,7 +26,7 @@
         {
             "nom":"Annuaire",
             "description":"Une application en ligne de commande qui permet de gerer un annuaire realisé avec le langage C",
-            "image":".png",
+            "image":"annuaire.png",
             "type":"BUTS1",
             "categories":["cli"], 
             "technologies":["C"]
@@ -42,7 +42,7 @@
         {
             "nom":"Blog PHP",
             "description":"Un site web qui permet de creer,consulter,modifier les articles et mettre des commentaires, le blog est realisé avec le langage PHP",
-            "image":".png",
+            "image":"blog-php.png",
             "type":"BUTS2",
             "categories":["front-end","web"], 
             "technologies":["php","html","css"]
