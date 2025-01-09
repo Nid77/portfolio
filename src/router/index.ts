@@ -46,7 +46,10 @@ const router = createRouter({
       name: 'error',
       component: ErrorView
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  }
 })
 
 export default router
