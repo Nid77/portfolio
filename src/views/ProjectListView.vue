@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import '@/assets/style/projet.css'
 
 import { computed, onMounted, ref } from 'vue'
 import { getProjects } from '@/services/projects';
@@ -82,11 +81,13 @@ const filterOptions = computed(() => {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 text-white">
             <div v-for="(projet, index) in filterProjet" :key="index">
                 <RouterLink :to="{ name: 'project', params: { id: projet.nom } }"
-                    class=" bg-[#242629] h-full p-4 rounded-lg flex flex-col items-center justify-center flex-1">
-                    <img class=" max-h-80 object-fill" :src="getImage(projet.image, projet.type)" alt="logo du projet" />
-                    <h2 class="flex-end">
+                    class=" bg-[#242629] h-full p-4 rounded-lg flex flex-col items-center flex-1">
+                    <div class="flex-1 flex items-center justify-center">
+                        <img class=" max-h-80 object-fill" :src="getImage(projet.image, projet.type)" alt="logo du projet" />
+                    </div>
+                    <p class="text-center">
                         {{ projet.nom }}
-                    </h2>
+                    </p>
                 </RouterLink>
             </div>
         </div>
