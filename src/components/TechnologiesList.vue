@@ -12,10 +12,10 @@
             <div class="langages grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4">
                 <div v-for="index in itemsPerPage" :key="index"
                     class="bg-[#242629] flex flex-col text-center items-center justify-center text-2x1 p-4 rounded-lg h-40">
-                    <a v-if="paginatedTechnologies[index-1]" :href="paginatedTechnologies[index-1].lien"
-                     class="flex flex-col items-center">
-                        <img :src="paginatedTechnologies[index-1].image" class="h-24 w-24 mb-4 self-center" />
-                        <h3>{{ paginatedTechnologies[index-1].nom }}</h3>
+                    <a v-if="paginatedTechnologies[index - 1]" :href="paginatedTechnologies[index - 1].lien"
+                        class="flex flex-col items-center">
+                        <img :src="paginatedTechnologies[index - 1].image" class="h-24 w-24 mb-4 self-center" />
+                        <h3>{{ paginatedTechnologies[index - 1].nom }}</h3>
                     </a>
                 </div>
             </div>
@@ -28,60 +28,44 @@
     </div>
 </template>
   
-<script lang="ts">
-import { defineComponent, ref, computed } from 'vue';
-
-interface Technology {
-    nom: string;
-    lien: string;
-    image: string;
-    tags: string[];
-    projets: string[];
-}
-
-export default defineComponent({
-    name: 'TechnologiesList',
-    props: {
-        technologies: {
-            type: Object as () => Record<string, Technology[]>,
-            required: true
-        },
-    },
-    setup(props) {
-        const activeTab = ref('Langages');
-        const activateTab = (tabName: string) => {
-            activeTab.value = tabName;
-            currentPage.value = 1;
-        };
-
-        const itemsPerPage = 12;
-        const currentPage = ref(1);
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+import { getTechnologies } from '@/services/technologies';
 
 
-        const totalPages = computed(() => {
-            return Math.ceil(props.technologies[activeTab.value].length / itemsPerPage);
-        });
+const technologies = getTechnologies();
+const activeTab = ref<string>('Langages');
+const activateTab = (tabName: string) => {
+    activeTab.value = tabName;
+    currentPage.value = 1;
+};
+const itemsPerPage = 12;
+const currentPage = ref(1);
 
-        const paginatedTechnologies = computed(() => {
-            const start = (currentPage.value - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            return props.technologies[activeTab.value].slice(start, end);
-        });
 
-        const nextPage = () => {
-            if (currentPage.value < totalPages.value) {
-                currentPage.value++;
-            }
-        };
-
-        const prevPage = () => {
-            if (currentPage.value > 1) {
-                currentPage.value--;
-            }
-        };
-        return { activeTab, activateTab, paginatedTechnologies, nextPage, prevPage, currentPage, totalPages, itemsPerPage };
-    },
+const totalPages = computed(() => {
+    return Math.ceil(technologies[activeTab.value].length / itemsPerPage);
 });
+
+const paginatedTechnologies = computed(() => {
+    const start = (currentPage.value - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    return technologies[activeTab.value].slice(start, end);
+});
+
+const nextPage = () => {
+    if (currentPage.value < totalPages.value) {
+        currentPage.value++;
+    }
+};
+
+const prevPage = () => {
+    if (currentPage.value > 1) {
+        currentPage.value--;
+    }
+};
+
+
 </script>
   
 <style scoped></style>

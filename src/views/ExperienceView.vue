@@ -1,46 +1,3 @@
-<script lang="ts">
-
-import { defineComponent, ref, computed } from 'vue';
-import 'flowbite';
-import experienceData from '@/assets/json/experiences.json';
-import Modal from '@/components/ModalView.vue';
-// import dayjs from 'dayjs'; // package a supprimer (pas utilisé)
-import { type Experience, type ExpCompetence } from '@/types/types';
-
-
-export default defineComponent({
-  name: 'ExperienceList',
-  components: {
-    Modal
-  },
-  setup() {
-    const experiences = ref<Experience[]>([]);
-    const error = ref<string | null>(null);
-    try {
-      experiences.value = (experienceData as any).experiences;
-    } catch (err) {
-      error.value = 'Erreur lors du chargement du fichier JSON';
-    }
-    const isModalOpen = ref(false);
-    const activeExperience = ref<number>(0);
-
-    function openModal(event: Event) {
-      activeExperience.value = parseInt((event.target as HTMLButtonElement).value);
-      isModalOpen.value = true;
-    }
-    function closeModal() {
-      isModalOpen.value = false;
-    }
-
-    function getImage(img: string) {
-      return new URL(`../assets/img/experience/${img}`, import.meta.url).href
-    }
-
-    return { experiences, error, isModalOpen, openModal, closeModal, getImage, activeExperience };
-  },
-});
-
-</script>
 
 <template>
   <div class="p-20 text-white text-center">
@@ -77,6 +34,40 @@ export default defineComponent({
     </div>
   </Modal>
 </template>
+
+<script setup lang="ts">
+
+import { ref } from 'vue';
+import 'flowbite';
+import Modal from '@/components/ModalView.vue';
+import { type Experience } from '@/types/types';
+import { getExperiences } from '@/services/experiences';
+
+
+
+const experiences = ref<Experience[]>([]);
+
+experiences.value = getExperiences();
+
+const error = ref<string | null>(null); 
+const isModalOpen = ref(false);
+const activeExperience = ref<number>(0);
+
+function openModal(event: Event) {
+  activeExperience.value = parseInt((event.target as HTMLButtonElement).value);
+  isModalOpen.value = true;
+}
+function closeModal() {
+  isModalOpen.value = false;
+}
+
+function getImage(img: string) {
+  return new URL(`../assets/img/experience/${img}`, import.meta.url).href
+}
+
+
+</script>
+
 
 <style scoped>
 .exp {

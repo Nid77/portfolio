@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import '@/assets/style/acceuil.css'
-import { defineComponent } from 'vue';
-import ProjectPresentation from '@/components/ProjectPresentation.vue';
-
-defineComponent({
-  name: 'HomeView',
-  components: {
-    ProjectPresentation
-  },
-
-})
-
-</script>
-
 <template>
   <div class="acceuil">
     <div class="head text-white h-screen w-full flex flex-col items-center gap-12 ">
@@ -57,6 +42,13 @@ defineComponent({
 
   </div>
 </template>
+
+<script setup lang="ts">
+import '@/assets/style/acceuil.css'
+import ProjectPresentation from '@/components/ProjectPresentation.vue';
+
+
+</script>
 
 <style scoped>
 .acceuil {

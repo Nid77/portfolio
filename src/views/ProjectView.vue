@@ -37,37 +37,27 @@
     </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { defineComponent, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { type Projet, type Technology } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
 import { getTechnologyByName } from '@/services/technologies';
 
-export default defineComponent({
-    name: 'Project',
-    setup() {
-        const route = useRoute();
-        const projectName = route.params.id;
-        const projet = ref<Projet | null>(null);
-        const technologies = ref<Technology[]>([]);
-        const categories = ref<string[]>([]);
 
-        projet.value = getProjectByName(projectName as string) as Projet;
-        technologies.value = projet.value?.technologies.map(tech => getTechnologyByName(tech)).filter(tech => tech !== null) as Technology[];
-        categories.value = projet.value?.categories;
+const route = useRoute();
+const projectName = route.params.id;
+const projet = ref<Projet | null>(null);
+const technologies = ref<Technology[]>([]);
+const categories = ref<string[]>([]);
 
-        function getImage(img: string) {
-            if (projet.value?.type)
-                return new URL(`../assets/img/${projet.value.type.includes('BUT') ? "projets-BUT" : "projets"}/${img}`, import.meta.url).href
-        }
+projet.value = getProjectByName(projectName as string) as Projet;
+technologies.value = projet.value?.technologies.map(tech => getTechnologyByName(tech)).filter(tech => tech !== null) as Technology[];
+categories.value = projet.value?.categories;
 
-
-        return { projet, getImage, technologies, categories };
-    },
-});
+function getImage(img: string) {
+    if (projet.value?.type)
+        return new URL(`../assets/img/${projet.value.type.includes('BUT') ? "projets-BUT" : "projets"}/${img}`, import.meta.url).href
+}
 
 </script>
-
-<style scoped>
-</style>

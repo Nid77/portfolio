@@ -73,7 +73,7 @@
         },
         {
             "nom":"Re-Process",
-            "description":"Un jeu de plateforme dans lequel le controleru est inverse, on doit manipuler l'environnment afin que les heros puissent avancer dans l'aventure",
+            "description":"Un jeu de plateforme avec comme theme l'inversion des controles, on doit manipuler l'environnment afin que les heros puissent avancer dans l'aventure",
             "image":"re-process.png",
             "type":"GMTK2023",
             "categories":["jeu"], 

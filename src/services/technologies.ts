@@ -4,6 +4,16 @@ import { type Technology } from '@/types/types'
 
 type TechnologyData = Record<string, Technology[]>;
 
+export function getTechnologies(): TechnologyData {
+  try {
+    const technologies: TechnologyData = technologiesData
+    return technologies
+  } catch (error) {
+    console.error(error)
+    return []
+  }
+}
+
 export function getTechnologyByName(name: string): Technology | null {
   try {
     
@@ -15,3 +25,4 @@ export function getTechnologyByName(name: string): Technology | null {
     return null
   }
 }
+

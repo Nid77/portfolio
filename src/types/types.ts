@@ -1,8 +1,8 @@
-export interface Competence {
-  nom_competence: string
+export interface Skill {
+  nom: string
   liste: string[]
   recul_reflexif: string
-  projets: Projet[]
+  projets: string[]
   bg_color: string
   bg_second_color: string
   niveaux: Niveau[]
