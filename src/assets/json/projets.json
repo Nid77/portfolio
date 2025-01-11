@@ -32,7 +32,7 @@
             "technologies":["C"]
         },
         {
-            "nom":"logiciel d’aide à la décision",
+            "nom":"Aide décisionnelle centre de santé",
             "description":" un logiciel d'aide décisionnelle pour la circulation entre des centres de santé realisé en JAVA",
             "image":"aide-descision.png",
             "type":"BUTS1",

@@ -1,5 +1,6 @@
 <template>
-    <section v-if="projets != undefined && projets.length > 0" class="anim-fade-in">
+    <section v-if="projets != undefined && projets.length > 0" class="flex anim-fade-in">
+        <h2>{{ title }}</h2>
         <div class="flex flex-row w-full items-center justify-center">
             <a href="#" v-for="p in projets">
                 <img :src="getImage(p.type, p.image)" alt="image du projet" />
@@ -14,6 +15,7 @@ import { type Projet } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
 
 const props = defineProps<{
+    title: string,
     projets: string[]
 }>()
 

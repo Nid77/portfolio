@@ -1,8 +1,8 @@
 
 <template>
-    <div v-if="skills" class="flex-col border-2 border-white-500 self-center w-5/6 ">
+    <div v-if="skills" class="flex flex-col border-2 border-white-500 self-center w-5/6">
 
-        <div class="flex w-full overflow-x-auto">
+        <div class="flex h-1/4 w-full overflow-x-auto">
             <button v-for="comp in skills" :key="comp.nom" :id="comp.nom" class="competence flex-1 text-3x1"
                 :style="'background-color :' + comp.bg_color"
                 :class="{ 'border-b-4 border-black-500 ': activeTab !== comp.nom, 'border-t-4 border-l-4 border-r-4 border-white-500 ': activeTab === comp.nom }"
@@ -11,20 +11,17 @@
             </button>
         </div>
 
-        <div class="flex flex-col p-4 gap-4 text-black border-b-4 border-t-4 border-r-4 border-white-500 "
+        <div class="flex flex-1 flex-col h-3/4 p-4 gap-4 text-black border-b-4 border-t-4 border-r-4 border-white-500"
             :style="'background-color :' + skill.bg_second_color">
 
             <div class="flex gap-4">
+
                 <div class="flex flex-col text-left  md:w-2/3 p-2 gap-4">
                     <div>
                         <h5 class="font-bold mb-2">Competence :</h5>
                         <p class="text-left text-black !important" v-for="item in skill.liste" :key="item">- {{ item }}</p>
                     </div>
-                    <div v-if="projects && projects.length > 0">
-                        <div v-for="p in projects" class="flex flex-col gap-2 border-2 border-black p-2">
-                            <p>{{ p.nom }}</p>
-                        </div>
-                    </div>
+                    <ScrollableCard v-if="projects && projects.length > 0" :projects="projects" />
                 </div>
 
                 <div class="flex flex-col md:w-1/3 text-black gap-2">
@@ -45,7 +42,6 @@
 
         </div>
 
-
     </div>
     <div v-else class="text-3xl text-red-500">{{ error }}</div>
 </template>
@@ -57,6 +53,7 @@ import { getProjets } from '@/services/skills';
 import ArrowSvg from '@/assets/svg/arrow.svg';
 import { type Projet } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
+import ScrollableCard from './ScrollableCard.vue';
 
 const skills = ref<Skill[]>([])
 const skill = ref<Skill>({} as Skill);
@@ -68,7 +65,7 @@ onMounted(() => {
 })
 
 const error = ref<string>("Erreur lors du chargement des compétences")
-const activeTab = ref('Langages');
+const activeTab = ref('Réalisation d’application');
 const activateTab = (tabName: string) => {
     activeTab.value = tabName;
     skill.value = skills.value.find(skill => skill.nom === tabName) as Skill;
@@ -84,8 +81,6 @@ const projects = computed(() => {
 
     return projs;
 })
-
-
 
 
 </script>
