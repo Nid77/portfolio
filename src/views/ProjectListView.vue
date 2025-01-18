@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <Combobox :options="filterOptions" @update-options="setFilterValue($event.value)" />
+        <Combobox :options="filterOptions" @updateOptions="setFilterValue($event)" />
 
     </div>
 
