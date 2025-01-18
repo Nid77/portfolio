@@ -15,7 +15,7 @@
                     <a v-if="paginatedTechnologies[index - 1]" :href="paginatedTechnologies[index - 1].lien"
                         class="flex flex-col items-center">
                         <img :src="paginatedTechnologies[index - 1].image" class="h-24 w-24 mb-4 self-center" />
-                        <h3>{{ paginatedTechnologies[index - 1].nom }}</h3>
+                        <p>{{ paginatedTechnologies[index - 1].nom }}</p>
                     </a>
                 </div>
             </div>

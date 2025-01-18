@@ -49,7 +49,6 @@ import Combobox from '@/components/Combobox.vue'
 import Cross from '@/assets/svg/cross.svg'
 
 
-const isFilterMenuOpen = ref(false)
 const projets = ref<Projet[]>([])
 const researchValue = ref<string>("")
 const filterValue = ref<Array<String>>([])
