@@ -9,7 +9,8 @@
                 class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 placeholder="Search..." v-model="researchValue" />
             <div class="flex mt-4">
-                <div v-for="filter in filterValue" class="flex gap-4 p-2 border border-gray-300 rounded-md">
+                <div v-for="filter in filterValue" :key="filter.valueOf()"
+                    class="flex gap-4 p-2 border border-gray-300 rounded-md">
                     <p>{{ filter }}</p>
                     <button @click="OnDeleteFilter(filter as string)">
                         <Cross />
@@ -24,19 +25,20 @@
 
     <div class="flex flex-col">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 text-white">
-            <div v-for="(projet, index) in filterProjet" :key="index">
+            <div v-for="(projet, index) in filterProjet" :key="index" class="project h-full">
                 <RouterLink :to="{ name: 'project', params: { id: projet.nom } }"
-                    class=" bg-[#242629] h-full p-4 rounded-lg flex flex-col items-center flex-1">
-                    <div class="flex-1 flex items-center justify-center">
-                        <img class=" max-h-80 object-fill" :src="getImage(projet.image, projet.type)"
+                    class="bg-[#242629] h-full p-4 rounded-lg flex flex-col items-center justify-between pt-8">
+                    <div class="flex-1 flex items-center justify-center w-full">
+                        <img class="max-h-80 w-full object-contain" :src="getImage(projet.image, projet.type)"
                             alt="logo du projet" />
                     </div>
-                    <p class="text-center">
+                    <p class="text-center mt-4">
                         {{ projet.nom }}
                     </p>
                 </RouterLink>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -93,5 +95,16 @@ const filterOptions = computed(() => {
 
 </script>
 
+<style>
+.project {
+    transition: transform 0.3s ease-in-out;
+}
 
+.project:hover {
+    transform: scale(1.03);
+}
 
+.project:not(:hover) {
+    transition: transform 0.6s ease-out;
+}
+</style>

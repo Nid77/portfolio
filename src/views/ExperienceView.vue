@@ -27,7 +27,7 @@
 
   <Modal :isOpen="isModalOpen" title="Detail de l'experience" @close="closeModal">
     <div class="exp-competences text-white flex flex-col md:grid md:grid-cols-3 gap-4">
-      <div v-for=" cmp in experiences[activeExperience].competences" class="exp-competence">
+      <div v-for=" cmp in experiences[activeExperience].competences" :key="cmp.competence" class="exp-competence">
         <h4>{{ cmp.competence }}</h4>
         <h5> {{ cmp.explication }}</h5>
       </div>
