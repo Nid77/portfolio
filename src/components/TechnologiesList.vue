@@ -1,7 +1,7 @@
 <template>
     <div class="tabs flex flex-col text-white w-3/4 mt-4">
         <ul class="flex flex-row justify-around gap-4 overflow-x-auto">
-            <li v-for=" (techList, category) in technologies"
+            <li v-for=" (techList, category) in technologies" :key="category"
                 :class="['p-4', { 'border-b-4 border-blue-500': activeTab === category }]"><button
                     @click="activateTab(category)">{{
                         category }}</button>
@@ -65,8 +65,12 @@ const prevPage = () => {
     }
 };
 
-
 </script>
   
-<style scoped></style>
-  
+<style scoped>
+
+p{
+    font-size: 0.9rem;
+}
+
+</style>

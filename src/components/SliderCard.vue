@@ -73,6 +73,7 @@ svg {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .slider {
@@ -89,7 +90,7 @@ svg {
 }
 
 .image {
-    max-height: 20rem;
+    max-height: 18rem;
     object-fit: contain;
 }
 </style>
