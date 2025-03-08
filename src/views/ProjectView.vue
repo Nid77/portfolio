@@ -4,8 +4,8 @@
 
         <div class="flex flex-col items-start gap-8">
 
-            <div class="p-4 self-center flex flex-col items-center">
-                <img class="max-h-96" :src="getImage(projet.image)" :alt="projet.nom" />
+            <div class="p-4 self-center flex flex-col items-center gap-4">
+                <img class="" :src="getImage(projet.image)" :alt="projet.nom" />
 
                 <div class="flex justify-center items-center p-2 gap-2">
                     <div v-for="cat in categories" :key="cat"
@@ -19,7 +19,7 @@
 
             <div class="flex flex-col items-start gap-2">
                 <h2>Description</h2>
-                <p>{{ projet.description }}</p>
+                <p class="text-left">{{ projet.description }}</p>
             </div>
 
             <div v-if="technologies.length > 0" class="flex flex-col items-start gap-2">
@@ -34,8 +34,11 @@
 
         </div>
     </div>
-    <div v-else>
-        <h1>Project non trouvé</h1>
+    <div v-else class="flex flex-col items-center justify-center h-screen">
+        <h1>Projet non trouvé</h1>
+        <button>
+            <RouterLink to="/">Retour à l'accueil</RouterLink>
+        </button>
     </div>
 </template>
 
@@ -65,3 +68,10 @@ function getImage(img: string) {
 
 </script>
 
+<style scoped>
+
+div > img {
+    height: 20rem;
+}
+
+</style>

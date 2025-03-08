@@ -126,14 +126,14 @@ animation: text-pop-up-top 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
-/* Animation  typewriter*/
+/* Animation typewriter*/
 .anim-typewriter{
     position: relative;
     border-right: 2px solid rgba(255,255,255,.75);
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    animation: typewriter 4s steps(44) 1s 1 normal both,
+    animation: typewriter 2s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
 }
 @keyframes typewriter{

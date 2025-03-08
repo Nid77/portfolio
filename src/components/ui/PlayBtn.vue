@@ -60,7 +60,6 @@ const props = defineProps<{
 
         .btn-arrow {
             opacity: 1;
-            transform: translateX(5px);
         }
     }
 }
