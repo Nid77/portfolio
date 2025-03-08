@@ -46,12 +46,12 @@
 
 import { computed, onMounted, ref } from 'vue'
 import { getProjects } from '@/services/projects';
-import { type Projet } from '@/types/types'
-import Combobox from '@/components/Combobox.vue'
+import { type Project } from '@/types/types'
+import Combobox from '@/components/ui/Combobox.vue'
 import Cross from '@/assets/svg/cross.svg'
 
 
-const projets = ref<Projet[]>([])
+const projets = ref<Project[]>([])
 const researchValue = ref<string>("")
 const filterValue = ref<Array<String>>([])
 const options = ['BUT', 'PERSO']

@@ -61,7 +61,8 @@
             "image":"gmtk2021.png",
             "type":"GMTK2021",
             "categories":["jeu"], 
-            "technologies":["c"]
+            "technologies":["c"],
+            "lien":"https://nid77.itch.io/mind-connexion"
         },
         {
             "nom":"Dicehead",
@@ -69,7 +70,8 @@
             "image":"dice-head.png",
             "type":"GMTK2022",
             "categories":["jeu"], 
-            "technologies":["unity","c#"]
+            "technologies":["unity","c#"],
+            "lien":"https://paperyka.itch.io/dicehead"
         },
         {
             "nom":"Re-Process",
@@ -77,7 +79,8 @@
             "image":"re-process.png",
             "type":"GMTK2023",
             "categories":["jeu"], 
-            "technologies":["unity","c#"]
+            "technologies":["unity","c#"],
+            "lien":"https://paperyka.itch.io/re-process"
         },
         {
             "nom":"Sonic Colors 2D Ultimate",

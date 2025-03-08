@@ -14,7 +14,7 @@ export interface Niveau {
   bg_color: string
 }
 
-export interface Projet {
+export interface Project {
   nom: string
   image: string
   description: string

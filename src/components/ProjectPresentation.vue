@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Projet } from '@/types/types';
+import { type Project } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
 import { RouterLink } from 'vue-router';
 
@@ -20,11 +20,10 @@ const props = defineProps<{
     projets: string[]
 }>()
 
-const projets: Projet[] = props.projets.map((p: string) => getProjectByName(p) as Projet).filter((project) => project !== undefined);
+const projets: Project[] = props.projets.map((p: string) => getProjectByName(p) as Project).filter((project) => project !== undefined);
 
 function getImage(type: string, img: string) {
     return new URL(`../assets/img/${type && type.includes('BUT') ? "projets-BUT" : "projets"}/${img}`, import.meta.url).href
 }
 
 </script>
-

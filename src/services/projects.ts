@@ -1,18 +1,18 @@
 import projetsData from '@/assets/json/projets.json'
-import { type Projet } from '@/types/types'
+import { type Project } from '@/types/types'
 
-export function getProjects(): Projet[] {
+export function getProjects(): Project[] {
   try {
-    return (projetsData as any).projets as Projet[]
+    return (projetsData as any).projets as Project[]
   } catch (error) {
     console.error(error)
     return []
   }
 }
 
-export function getProjectByName(name: string): Projet | null {
+export function getProjectByName(name: string): Project | null {
   try {
-    return (projetsData as any).projets.find((project: Projet) => project.nom === name) as Projet
+    return (projetsData as any).projets.find((project: Project) => project.nom === name) as Project
   } catch (error) {
     console.error(error)
     return null

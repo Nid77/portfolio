@@ -1,4 +1,3 @@
-
 <template>
     <div v-if="skills" class="flex flex-col border-2 border-white-500 self-center w-5/6">
 
@@ -19,18 +18,20 @@
                 <div class="flex flex-col text-left  md:w-2/3 p-2 gap-4">
                     <div>
                         <h5 class="font-bold mb-2">Competence :</h5>
-                        <p class="text-left text-black !important" v-for="item in skill.liste" :key="item">- {{ item }}</p>
+                        <p class="text-left text-black !important" v-for="item in skill.liste" :key="item">- {{ item }}
+                        </p>
                     </div>
                     <ScrollableCard v-if="projects && projects.length > 0" :projects="projects" />
                 </div>
 
                 <div class="flex flex-col md:w-1/3 text-black gap-2">
-                    <div v-for="(item, index) in skill.niveaux"
+                    <div v-for="(item, index) in skill.niveaux" :key="item.bg_color"
                         class="flex flex-col items-center rounded border-2 border-black p-2 text-center flex-1"
                         :style="'background-color:' + item.bg_color">
 
-                        <h4 class="font-bold text-black flex text-2xl items-center justify-center mb-2">Niveau {{ index + 1
-                        }} <div v-if="index.toString() == skill.mon_niveau" class="absolute backandforth ">
+                        <h4 class="font-bold text-black flex text-2xl items-center justify-center mb-2">Niveau {{ index
+                            + 1
+                            }} <div v-if="index.toString() == skill.mon_niveau" class="absolute backandforth ">
                                 <ArrowSvg />
                             </div>
                         </h4>
@@ -51,9 +52,9 @@ import { onMounted, ref, computed } from 'vue';
 import { type Skill } from '@/types/types'
 import { getProjets } from '@/services/skills';
 import ArrowSvg from '@/assets/svg/arrow.svg';
-import { type Projet } from '@/types/types';
+import { type Project } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
-import ScrollableCard from './ScrollableCard.vue';
+import ScrollableCard from './SliderCard.vue';
 
 const skills = ref<Skill[]>([])
 const skill = ref<Skill>({} as Skill);
@@ -76,7 +77,7 @@ const projects = computed(() => {
     let projs = skill.value && skill.value.projets
         ? skill.value.projets
             .map((p: string) => getProjectByName(p))
-            .filter((project): project is Projet => project != null)
+            .filter((project): project is Project => project != null)
         : [];
 
     return projs;
@@ -84,7 +85,3 @@ const projects = computed(() => {
 
 
 </script>
-
-
-
-
