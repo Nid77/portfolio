@@ -1,6 +1,6 @@
 <template>
     <div class="flex items-center justify-center p-2">
-        <button class="" @click="OnPrevious()">
+        <button class="btn-chv" @click="OnPrevious()">
             <Chevron class="flip" />
         </button>
 
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <button class="" @click="OnNext()">
+        <button class="btn-chv" @click="OnNext()">
             <Chevron />
         </button>
     </div>
@@ -60,11 +60,19 @@ function OnPrevious() {
 
 <style scoped>
 svg {
-    transform: scale(2);
+    transform: scale(3);
 }
 
 .flip {
-    transform: scale(-2);
+    transform: scale(-3);
+}
+
+.btn-chv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
 }
 
 .slider-container {

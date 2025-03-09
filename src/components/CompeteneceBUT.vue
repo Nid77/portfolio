@@ -21,7 +21,7 @@
                         <p class="text-left text-black !important" v-for="item in skill.liste" :key="item">- {{ item }}
                         </p>
                     </div>
-                    <ScrollableCard v-if="projects && projects.length > 0" :projects="projects" />
+                    <SliderCard v-if="projects && projects.length > 0" :projects="projects" />
                 </div>
 
                 <div class="flex flex-col md:w-1/3 text-black gap-2">
@@ -54,7 +54,7 @@ import { getProjets } from '@/services/skills';
 import ArrowSvg from '@/assets/svg/arrow.svg';
 import { type Project } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
-import ScrollableCard from './SliderCard.vue';
+import SliderCard from './SliderCard.vue';
 
 const skills = ref<Skill[]>([])
 const skill = ref<Skill>({} as Skill);
