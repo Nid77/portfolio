@@ -3,7 +3,7 @@
         <h1 class="text-4xl md:text-6xl font-bold anim-entrance-text">Me Contacter</h1>
     </div>
 
-    <div class="m-4 p-4 bg-[#242629] w-3/4 self-center">
+    <div class="m-4 p-4 bg-[#242629] w-3/4 self-center rounded-lg">
         <div class="flex flex-col items-start text-white">
             <p>Pour me contacter, vous pouvez m'envoyer un email !</p>
             <p>Email : ray.tcontact@protonmail.com</p>

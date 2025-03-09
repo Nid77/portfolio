@@ -1,43 +1,45 @@
 <template>
-    <a :href="props.link" target="_blank">
-        <button class="btn-play">
-            <span class="btn-label">PLAY</span>
-            <span class="btn-arrow">→</span>
-        </button>
-    </a>
+
+    <button class="btn" @click="redirect">
+        <span class="btn-label">{{ props.title ?? "Explorer le projet" }}</span>
+        <span class="btn-arrow">→</span>
+    </button>
+
 </template>
 
 <script setup lang="ts">
 
 const props = defineProps<{
     link: string
+    title?: string
 }>()
 
-
+const redirect = () => {
+  window.open(props.link, "_blank");
+};
 </script>
 
 <style scoped lang="scss">
-.btn-play {
+.btn {
     position: relative;
-    display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
     background-color: #000;
     color: white;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     cursor: pointer;
     overflow: hidden;
     transition: background-color 0.4s ease;
 
     .btn-label {
         position: relative;
+        text-align: center;
         z-index: 1;
     }
 
     .btn-arrow {
         position: relative;
-        z-index: 1;
         margin-left: 10px;
+        z-index: 1;
         opacity: 0;
         transition: opacity 0.4s ease, transform 0.4s ease;
     }

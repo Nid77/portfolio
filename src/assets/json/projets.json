@@ -96,7 +96,8 @@
             "image":"gestio.png",
             "type":"PERSO",
             "categories":["cli"],
-            "technologies":["Go"]
+            "technologies":["Go"],
+            "lien":"https://github.com/Nid77/Gestio"
         }
     ]
 }

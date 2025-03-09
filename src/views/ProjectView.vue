@@ -1,44 +1,40 @@
 <template>
     <div v-if="projet" class="flex flex-col p-8 gap-6">
-        <h1>{{ projet.nom }}</h1>
 
-        <div class="flex flex-col items-start gap-8">
+        <div class="p-4 self-center flex flex-col items-center gap-4 h-screen">
+            <h1 class="text-1xl">{{ projet.nom }}</h1>
+            <img class="" :src="getImage(projet.image)" :alt="projet.nom" />
 
-            <div class="p-4 self-center flex flex-col items-center gap-4">
-                <img class="" :src="getImage(projet.image)" :alt="projet.nom" />
-
-                <div class="flex justify-center items-center p-2 gap-2">
-                    <div v-for="cat in categories" :key="cat"
-                        class="border border-white rounded-xl h-auto text-white p-2">
-                        <p>{{ cat.toLocaleUpperCase() }}</p>
-                    </div>
+            <div class="cat flex justify-center items-center p-2 gap-2">
+                <div v-for="cat in categories" :key="cat" class="border border-white rounded-xl h-auto text-white p-2">
+                    <p>{{ cat.toLocaleUpperCase() }}</p>
                 </div>
             </div>
 
-            <PlayBtn v-if="projet.lien" :link="projet.lien" class="self-center"></PlayBtn>
-
-            <div class="flex flex-col items-start gap-2">
-                <h2>Description</h2>
-                <p class="text-left">{{ projet.description }}</p>
-            </div>
-
-            <div v-if="technologies.length > 0" class="flex flex-col items-start gap-2">
-                <h2>Technologies</h2>
-                <div class="flex gap-4">
-                    <a v-for="tech in technologies" :key="tech.nom" class="flex flex-col items-center">
-                        <img :src="tech.image" class="h-24 w-24 mb-4 self-center" />
-                        <h3>{{ tech.nom }}</h3>
-                    </a>
-                </div>
-            </div>
-
+            <LinkBtn v-if="projet.lien" :link="projet.lien" class="self-center"
+                :style="{ width: '22rem', height: '4rem', fontSize: '2rem' }">
+            </LinkBtn>
         </div>
+
+        <div class="flex flex-col items-start gap-2">
+            <h2>Description</h2>
+            <p class="text-left">{{ projet.description }}</p>
+        </div>
+
+        <div v-if="technologies.length > 0" class="flex flex-col items-start gap-2">
+            <h2>Technologies</h2>
+            <div class="flex gap-4">
+                <a v-for="tech in technologies" :key="tech.nom" class="flex flex-col items-center">
+                    <img :src="tech.image" class="h-24 w-24 mb-4 self-center" />
+                    <h3>{{ tech.nom }}</h3>
+                </a>
+            </div>
+        </div>
+
     </div>
     <div v-else class="flex flex-col items-center justify-center h-screen">
         <h1>Projet non trouvé</h1>
-        <button>
-            <RouterLink to="/">Retour à l'accueil</RouterLink>
-        </button>
+        <RouterLink to="/">Retour à l'accueil</RouterLink>
     </div>
 </template>
 
@@ -48,7 +44,7 @@ import { useRoute } from 'vue-router';
 import { type Project, type Technology } from '@/types/types';
 import { getProjectByName } from '@/services/projects';
 import { getTechnologyByName } from '@/services/technologies';
-import PlayBtn from '@/components/ui/PlayBtn.vue';
+import LinkBtn from '@/components/ui/LinkBtn.vue';
 
 
 const route = useRoute();
@@ -69,9 +65,11 @@ function getImage(img: string) {
 </script>
 
 <style scoped>
-
-div > img {
+div>img {
     height: 20rem;
 }
 
+.cat p {
+    font-size: 0.8rem;
+}
 </style>

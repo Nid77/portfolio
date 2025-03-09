@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-center p-2 border border-black">
+    <div class="flex items-center justify-center p-2">
         <button class="" @click="OnPrevious()">
             <Chevron class="flip" />
         </button>
