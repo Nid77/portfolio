@@ -29,7 +29,7 @@ export interface Technology {
   lien: string
   image: string
   tags: string[]
-  projets: string[]
+  projets?: string[]
 }
 
 export interface Experience {

@@ -10,7 +10,7 @@ export function getTechnologies(): TechnologyData {
     return technologies
   } catch (error) {
     console.error(error)
-    return []
+    return {}
   }
 }
 
