@@ -37,8 +37,6 @@
       <ProjectPresentation title="Scolaire" :projets="['12cm3', 'Aide décisionnelle centre de santé', 'MyWeather']" />
       <ProjectPresentation title="Personnel" :projets="['Gestio', 'Sonic Colors 2D Ultimate']" />
     </section>
-    
-
 
   </div>
 </template>
