@@ -4,10 +4,8 @@
     </div>
 
     <div class="flex w-3/4 self-center gap-2 ">
-        <div class="w-full ">
-            <input type="text"
-                class="w-full h-12 px-4 pr-12 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-                placeholder="Search..." v-model="researchValue" />
+        <div class="flex flex-col w-full">
+            <SearchBar v-model:researchValue="researchValue" />
             <div class="flex mt-4">
                 <div v-for="filter in filterValue" :key="filter.valueOf()"
                     class="flex gap-4 p-2 border border-gray-300 rounded-md">
@@ -18,25 +16,22 @@
                 </div>
             </div>
         </div>
-
         <Combobox :options="filterOptions" @updateOptions="setFilterValue($event)" />
-
     </div>
 
     <div class="flex flex-col">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 text-white">
-            <div v-for="(projet, index) in filterProjet" :key="index" class="project h-full">
-                <RouterLink :to="{ name: 'project', params: { id: projet.nom } }"
-                    class="bg-[#242629] h-full p-4 rounded-lg flex flex-col items-center justify-between pt-8">
-                    <div class="flex-1 flex items-center justify-center w-full">
-                        <img class="max-h-80 w-full object-contain" :src="getImage(projet.image, projet.type)"
-                            alt="logo du projet" />
-                    </div>
-                    <p class="text-center mt-4">
-                        {{ projet.nom }}
-                    </p>
-                </RouterLink>
-            </div>
+            <RouterLink v-for="(projet, index) in filterProjet" :key="index"
+                :to="{ name: 'project', params: { id: projet.nom } }"
+                class="project anim-scale-up-center bg-[#242629] h-full p-4 rounded-lg flex flex-col items-center justify-between pt-8">
+                <div class="flex-1 flex items-center justify-center w-full">
+                    <img class="max-h-80 w-full object-contain" :src="getImage(projet.image, projet.type)"
+                        alt="logo du projet" />
+                </div>
+                <p class="text-center mt-4">
+                    {{ projet.nom }}
+                </p>
+            </RouterLink>
         </div>
 
     </div>
@@ -49,6 +44,8 @@ import { getProjects } from '@/services/projects';
 import { type Project } from '@/types/types'
 import Combobox from '@/components/ui/Combobox.vue'
 import Cross from '@/assets/svg/cross.svg'
+import SearchBar from '@/components/ui/SearchBar.vue';
+import { RouterLink } from 'vue-router'
 
 
 const projets = ref<Project[]>([])
@@ -97,14 +94,10 @@ const filterOptions = computed(() => {
 
 <style>
 .project {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.4s ease-out;
 }
 
 .project:hover {
-    transform: scale(1.03);
-}
-
-.project:not(:hover) {
-    transition: transform 0.6s ease-out;
+    transform: scale(1.04) !important;
 }
 </style>

@@ -1,9 +1,8 @@
-[class*='anim'] {
-  opacity: 0;
-}
 .animate {
   opacity: 1;
+  animation-iteration-count: 1;
 }
+
 
 @for $i from 1 through 10 {
   .delay-#{$i} {
@@ -96,12 +95,10 @@
 
 @keyframes slide-in-right {
   0% {
-    -transform: translateX(1000px);
     transform: translateX(1000px);
     opacity: 0;
   }
   100% {
-    -transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -195,7 +192,7 @@
 }
 
 .anim-entrance-text.animate {
-  animation: bounceIn 1.2s both;
+  animation: bounceIn 1s both;
 }
 
 /* Animation de back and forth*/
@@ -233,4 +230,23 @@
 }
 .anim-scale-up-hor-left.animate {
   animation: scale-up-hor-left 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-up-center
+ * ----------------------------------------
+ */
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.anim-scale-up-center.animate {
+  animation: scale-up-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }

@@ -3,7 +3,7 @@ import 'flowbite'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { defineComponent, onMounted, watch } from 'vue';
+import { nextTick } from 'vue'
 import { initializeObserver } from './animation'
 
 import App from './App.vue'
@@ -14,9 +14,10 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
-
-watch(router.currentRoute, () => {
-  initializeObserver();
+router.afterEach(() => {
+  nextTick(() => {
+    initializeObserver();
+  });
 });
-
+initializeObserver();
 app.mount('#app')
