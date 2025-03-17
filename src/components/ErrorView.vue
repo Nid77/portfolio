@@ -6,10 +6,9 @@
     </div>
 </template>
   
-<script lang="ts">
-export default {
-    name: 'ErrorView',
-};
+<script setup lang="ts">
+import { RouterLink } from 'vue-router'
+
 </script>
 
 <style scoped>

@@ -1,10 +1,7 @@
-<script lang="ts">
+<script setup lang="ts">
 import '@/assets/style/header.css'
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-export default {
-  name: 'HeaderView',
-  setup() {
     const isMenuOpen = ref(false);
     function toggleMenu() {
       isMenuOpen.value = !isMenuOpen.value;
@@ -26,15 +23,8 @@ export default {
 
     function isMenuOpenFalse() {
       isMenuOpen.value = false;
-    }
+    }  
 
-    return { toggleMenu, isMenuOpen, windowWidth, isMenuOpenFalse };
-  }
-}
-
-/*
-:class="{ 'translate-x-0': (isMenuOpen && windowWidth < 1096) || windowWidth >= 1096, 'translate-x-full': (!isMenuOpen && !(windowWidth >= 1096)) || windowWidth < 1096 }"
-*/
 </script>
 
 <template>
@@ -52,19 +42,19 @@ export default {
       <ul
         class="flex flex-col items-center text-white font-bold text-2xl md:flex-row md:items-end mr-4 bg-gray-500 md:bg-[#16161a]">
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink :to='{ name: "home" }'>Accueil</RouterLink>
+          <a href="/">Accueil</a>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink :to='{ name: "projets" }'>Projets</RouterLink>
+          <a href="/projects">Projets</a>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink :to='{ name: "competences" }'>Compétences</RouterLink>
+          <a href="/skills">Compétences</a>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink :to='{ name: "experiences" }'>Experiences</RouterLink>
+          <a href="/experiences">Expériences</a>
         </li>
         <li @click="isMenuOpenFalse" class="p-2">
-          <RouterLink :to='{ name: "contact" }'>Contact</RouterLink>
+          <a href="/contact">Contact</a>
         </li>
 
       </ul>

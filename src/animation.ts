@@ -2,6 +2,7 @@ export function initializeObserver() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        console.log('intersecting', entry.target)
         entry.target.classList.add('animate')
         observer.unobserve(entry.target)
       }
@@ -15,6 +16,7 @@ export function initializeObserver() {
       'animationend',
       () => {
         element.classList.remove('animate')
+        element.classList.add('visible')
       },
       { once: true }
     )

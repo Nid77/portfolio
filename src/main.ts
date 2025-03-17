@@ -16,6 +16,7 @@ app.use(router)
 
 router.afterEach(() => {
   nextTick(() => {
+    console.log('size ',document.body.offsetHeight)
     initializeObserver();
   });
 });

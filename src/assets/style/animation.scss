@@ -1,8 +1,15 @@
-.animate {
+[class*="anim-"] {
+  opacity: 0;
+}
+
+[class*="anim-"].animate {
   opacity: 1;
   animation-iteration-count: 1;
 }
 
+.visible {
+  opacity: 1;
+}
 
 @for $i from 1 through 10 {
   .delay-#{$i} {
