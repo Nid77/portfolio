@@ -36,7 +36,7 @@
             "description":" un logiciel d'aide décisionnelle pour la circulation entre des centres de santé realisé en JAVA",
             "image":"aide-descision.png",
             "type":"BUTS1",
-            "categories":["front-end","aide-decisionnelle","algorithmique"], 
+            "categories":["front-end","back-end","aide-decisionnelle","algorithmique"], 
             "technologies":["java"]
         },
         {
@@ -98,6 +98,15 @@
             "categories":["cli"],
             "technologies":["Go"],
             "lien":"https://github.com/Nid77/Gestio"
+        },
+        {
+            "nom": "Gitlab2Hub",
+            "description": "Un outil pour migrer les projets gitlab vers github",
+            "image": "gitlab2hub.png",
+            "type": "PERSO",
+            "categories": ["outils", "back-end", "front-end"],
+            "technologies": ["Next.js", "Node.js","Express.js"],
+            "lien":"https://github.com/Nid77/GitLab2Hub-Back"
         }
     ]
 }
