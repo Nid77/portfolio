@@ -44,7 +44,29 @@
       "dateFin": "01/09/2025",
       "description": "Développement de fonctionnalités liées aux produits de l’entreprise. Résolution de bug. Automatisation de procédures.",
       "logo_entreprise": "GONEXA/Logo rectangle négatif.png",
-      "Retour": ""
+      "Retour": "Cette alternance m'a permis de consolider mes compétences en développement, gestion de données, administration de systèmes, gestion de projet et travail en équipe. J'ai pu travailler sur des projets réels, ce qui m'a aidé à mieux comprendre les exigences professionnelles et à améliorer mes pratiques de développement.",
+      "competences": [
+        {
+          "competence": "Réaliser un développement d’application",
+          "explication": "Au départ limité aux projets scolaires, j’ai pu développer en C# avec Entity Framework sur des projets concrets. J’ai corrigé des bugs (hotfix), ajouté des fonctionnalités (user stories) et amélioré mes pratiques grâce aux retours de l’équipe. Je suis aujourd’hui capable de développer et intégrer une fonctionnalité de manière autonome et professionnelle."
+        },
+        {
+          "competence": "Gérer des données de l’information",
+          "explication": "Avant je savais écrire des requêtes SQL simples. En alternance, j’ai utilisé Entity Framework et LINQ pour manipuler les données en C#. J’ai appris à gérer la cohérence et la qualité des données dans des projets réels et je peux maintenant interagir avec une base de données de manière professionnelle."
+        },
+        {
+          "competence": "Administrer des systèmes informatiques communicants complexes",
+          "explication": "J’ai découvert Azure DevOps et participé au déploiement d’applications dans différents environnements (test, dev, prod). J’ai configuré des pipelines, des releases et sécurisé des informations sensibles (mots de passe, clés) via les coffres Azure. Cela m’a donné une meilleure compréhension du cycle de vie complet d’une application."
+        },
+        {
+          "competence": "Conduire un projet",
+          "explication": "J’ai travaillé avec la méthode Agile en utilisant Azure Boards pour suivre les user stories, organiser les sprints et prioriser les tâches. Cela m’a permis de mieux gérer mon temps, de travailler efficacement et de m’intégrer dans une équipe projet."
+        },
+        {
+          "competence": "Travailler dans une équipe informatique",
+          "explication": "J’ai collaboré avec plusieurs développeurs et un autre alternant, en partageant les tâches et en suivant un projet commun. Cette expérience m’a permis de progresser dans le travail en équipe et de comprendre l’importance de la communication et des bonnes pratiques de code."
+        }
+      ]
     }
   ]
 }
