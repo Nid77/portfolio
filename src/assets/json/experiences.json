@@ -51,6 +51,10 @@
           "explication": "Au départ limité aux projets scolaires, j’ai pu développer en C# avec Entity Framework sur des projets concrets. J’ai corrigé des bugs (hotfix), ajouté des fonctionnalités (user stories) et amélioré mes pratiques grâce aux retours de l’équipe. Je suis aujourd’hui capable de développer et intégrer une fonctionnalité de manière autonome et professionnelle."
         },
         {
+          "competence": "Optimiser des applications informatiques",
+          "explication": "J’ai appris à analyser et améliorer les performances des programmes. Par exemple en réduisant le temps d’attente des signatures via une file d’attente, en optimisant des requêtes de données avec LINQ ou en améliorant la lisibilité et la factorisation du code. Ces missions m’ont permis de concevoir des solutions plus efficaces et fiables."
+        },
+        {
           "competence": "Gérer des données de l’information",
           "explication": "Avant je savais écrire des requêtes SQL simples. En alternance, j’ai utilisé Entity Framework et LINQ pour manipuler les données en C#. J’ai appris à gérer la cohérence et la qualité des données dans des projets réels et je peux maintenant interagir avec une base de données de manière professionnelle."
         },
